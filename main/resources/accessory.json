@@ -1,0 +1,26 @@
+{
+  "sellPrice": 300,
+  "materials": {
+    "kobold_lord_fang": {
+      "id": "kobold_lord_fang",
+      "name": "狗王の牙",
+      "floor": 1,
+      "requiredProficiency": 1,
+      "requiredLevel": 9
+    },
+    "asterios_crown": {
+      "id": "asterios_crown",
+      "name": "アステリオスの冠",
+      "floor": 2,
+      "requiredProficiency": 3,
+      "requiredLevel": 11
+    },
+    "vibrant_branch": {
+      "id": "vibrant_branch",
+      "name": "生命力の枝",
+      "floor": 3,
+      "requiredProficiency": 6,
+      "requiredLevel": 14
+    }
+  }
+}
