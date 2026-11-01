@@ -1,0 +1,1008 @@
+[
+  {
+    "recipeId": "bake_boar_meat",
+    "method": "焼く",
+    "materials": {
+      "boar_meat": {
+        "id": "boar_meat",
+        "name": "<ボアの肉>",
+        "material": "PORKCHOP",
+        "price": 0,
+        "sellPrice": 10,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "焼くと食べられそうな肉",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 5,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "boar_steak",
+      "name": "<ボアのステーキ>",
+      "material": "COOKED_PORKCHOP",
+      "price": 60,
+      "sellPrice": 20,
+      "customModelData": 0,
+      "rank": "C",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "ボアの肉を焼いたもの　少し硬い"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_meat",
+      "name": "<ボアの生焼け肉>",
+      "material": "PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "生焼けボア肉　食べられるが不味い"
+    },
+    "failureLateItem": {
+      "id": "charred_meat",
+      "name": "<ボアの焦げ肉>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 3,
+      "value2": 0,
+      "description": "焦げたボア肉　食べられるが不味い"
+    },
+    "requiredProficiency": 1,
+    "exp": 3
+  },
+  {
+    "recipeId": "bake_boar_meat_carrot",
+    "method": "焼く",
+    "materials": {
+      "boar_meat": {
+        "id": "boar_meat",
+        "name": "<ボアの肉>",
+        "material": "PORKCHOP",
+        "price": 0,
+        "sellPrice": 10,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "焼くと食べられそうな肉",
+        "amount": 1
+      },
+      "carrot": {
+        "id": "carrot",
+        "name": "<普通のにんじん>",
+        "material": "CARROT",
+        "price": 30,
+        "sellPrice": 30,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "採れたてのにんじん",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 7,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "boar_steak_in_carrot",
+      "name": "<ボアのステーキ にんじんを添えて>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 20,
+      "customModelData": 0,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "ボアの肉とにんじんを焼いたもの"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_meat",
+      "name": "<ボアの生焼け肉>",
+      "material": "PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "生焼けボア肉　食べられるが不味い"
+    },
+    "failureLateItem": {
+      "id": "charred_meat",
+      "name": "<ボアの焦げ肉>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 3,
+      "value2": 0,
+      "description": "焦げたボア肉　食べられるが不味い"
+    },
+    "requiredProficiency": 3,
+    "exp": 5
+  },
+  {
+    "recipeId": "boar_stew",
+    "method": "煮込む",
+    "materials": {
+      "boar_meat": {
+        "id": "boar_meat",
+        "name": "<ボアの肉>",
+        "material": "PORKCHOP",
+        "price": 0,
+        "sellPrice": 10,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "焼くと食べられそうな肉",
+        "amount": 1
+      },
+      "cows_milk": {
+        "id": "cows_milk",
+        "name": "<雌牛のミルク>",
+        "material": "COOKED_PORKCHOP",
+        "price": 0,
+        "sellPrice": 60,
+        "customModelData": 9,
+        "rank": "C",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "コボルドが連れていた雌牛のミルク",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 10,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "boar_stew",
+      "name": "<ボアのシチュー>",
+      "material": "RABBIT_STEW",
+      "price": 150,
+      "sellPrice": 30,
+      "customModelData": 0,
+      "rank": "B",
+      "category": "食料",
+      "value1": 8,
+      "value2": 3,
+      "description": "ボアの肉をミルクで煮込んだもの"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_boar_stew",
+      "name": "<生焼けボアのシチュー>",
+      "material": "SUSPICIOUS_STEW",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 4,
+      "description": "生焼けボア肉をミルクに浸したもの"
+    },
+    "failureLateItem": {
+      "id": "charred_boar_stew",
+      "name": "<焦げたボアのシチュー>",
+      "material": "SUSPICIOUS_STEW",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 3,
+      "value2": 4,
+      "description": "ボアの肉とミルクが焦げたもの"
+    },
+    "requiredProficiency": 2,
+    "exp": 5
+  },
+  {
+    "recipeId": "hot_milk",
+    "method": "煮込む",
+    "materials": {
+      "cows_milk": {
+        "id": "cows_milk",
+        "name": "<雌牛のミルク>",
+        "material": "COOKED_PORKCHOP",
+        "price": 0,
+        "sellPrice": 60,
+        "customModelData": 9,
+        "rank": "C",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "コボルドが連れていた雌牛のミルク",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 3,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "hot_milk",
+      "name": "<ホットミルク>",
+      "material": "COOKED_PORKCHOP",
+      "price": 100,
+      "sellPrice": 30,
+      "customModelData": 10,
+      "rank": "C",
+      "category": "食料",
+      "value1": 1,
+      "value2": 15,
+      "description": "体が温まるミルク"
+    },
+    "failureEarlyItem": {
+      "id": "lukewarm_milk",
+      "name": "<生ぬるいミルク>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 11,
+      "rank": "D",
+      "category": "食料",
+      "value1": 1,
+      "value2": 5,
+      "description": "びみょ～なミルク"
+    },
+    "failureLateItem": {
+      "id": "burnt_milk",
+      "name": "<焦げミルク>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 12,
+      "rank": "D",
+      "category": "食料",
+      "value1": 1,
+      "value2": 5,
+      "description": "茶色に濁ったミルク"
+    },
+    "requiredProficiency": 1,
+    "exp": 3
+  },
+  {
+    "recipeId": "simmered_dire_meat",
+    "method": "煮込む",
+    "materials": {
+      "dire_wolf_meat": {
+        "id": "dire_wolf_meat",
+        "name": "<ダイアウルフの肉>",
+        "material": "MUTTON",
+        "price": 0,
+        "sellPrice": 20,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "硬いがよく火を通せば食べられそうな肉",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 13,
+    "baseToleranceTicks": 6,
+    "difficulty": "C",
+    "successItem": {
+      "id": "simmered_dire_meat",
+      "name": "<ダイアウルフの角煮>",
+      "material": "COOKED_MUTTON",
+      "price": 170,
+      "sellPrice": 30,
+      "customModelData": 0,
+      "rank": "C",
+      "category": "食料",
+      "value1": 8,
+      "value2": 2,
+      "description": "ダイアウルフの肉をほろほろに煮込んだもの"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_dire_meat",
+      "name": "<生焼けのダイアウルフ肉>",
+      "material": "MUTTON",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "生焼けで硬い肉　食べられるが不味い"
+    },
+    "failureLateItem": {
+      "id": "charred_dire_meat",
+      "name": "<煮崩れたダイアウルフ肉>",
+      "material": "COOKED_MUTTON",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 3,
+      "value2": 0,
+      "description": "煮崩れてドロドロの肉 味は大丈夫"
+    },
+    "requiredProficiency": 3,
+    "exp": 5
+  },
+  {
+    "recipeId": "grilled_trout",
+    "method": "焼く",
+    "materials": {
+      "small_trout": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 7,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "grilled_trout",
+      "name": "<焼きマス>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 20,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 1,
+    "exp": 3
+  },
+  {
+    "recipeId": "fry_smelt",
+    "method": "揚げる",
+    "materials": {
+      "lake_smelt": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 4,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "fried_smelt",
+      "name": "<揚げわかさぎ>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 50,
+      "customModelData": 302,
+      "rank": "D",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "サクサクした食感のワカサギ。小ぶりだが味が凝縮されている。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 1,
+    "exp": 3
+  },
+  {
+    "recipeId": "bake_crucian",
+    "method": "焼く",
+    "materials": {
+      "pond_crucian": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 5,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "grilled_crucian",
+      "name": "<フナの塩焼き>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 50,
+      "customModelData": 303,
+      "rank": "D",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "ふっくらと焼き上げられたフナ。素朴で落ち着く味わい。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 1,
+    "exp": 3
+  },
+  {
+    "recipeId": "fry_goby",
+    "method": "揚げる",
+    "materials": {
+      "spotted_goby": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 5,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "fried_goby",
+      "name": "<ハゼの唐揚げ>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 50,
+      "customModelData": 304,
+      "rank": "D",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "衣をつけてカラッと揚げたハゼ。身がホクホクしている。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 3,
+    "exp": 5
+  },
+  {
+    "recipeId": "bake_dace",
+    "method": "焼く",
+    "materials": {
+      "river_dace": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 6,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "grilled_dace",
+      "name": "<ウグイの塩焼き>",
+      "material": "COOKED_SALMON",
+      "price": 0,
+      "sellPrice": 50,
+      "customModelData": 305,
+      "rank": "D",
+      "category": "食料",
+      "value1": 8,
+      "value2": 0,
+      "description": "強火で一気に焼き上げたウグイ。皮がパリッとしていて香ばしい。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 3,
+    "exp": 5
+  },
+  {
+    "recipeId": "cook_bass",
+    "method": "焼く",
+    "materials": {
+      "green_bass": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 8,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "bass_meuniere",
+      "name": "<バスのムニエル>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 80,
+      "customModelData": 306,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "バターの香りが食欲をそそる本格料理。淡白な身にコクが加わっている。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 5,
+    "exp": 7
+  },
+  {
+    "recipeId": "cook_salmon",
+    "method": "焼く",
+    "materials": {
+      "forest_salmon": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 9,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "salmon_steak",
+      "name": "<サーモンステーキ>",
+      "material": "COOKED_SALMON",
+      "price": 0,
+      "sellPrice": 80,
+      "customModelData": 307,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "贅沢に厚切りされたサケのステーキ。脂が乗っており食べ応え抜群。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 5,
+    "exp": 7
+  },
+  {
+    "recipeId": "stew_carp",
+    "method": "煮込む",
+    "materials": {
+      "shimmering_carp": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 12,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "miso_carp",
+      "name": "<コイの味噌煮>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 80,
+      "customModelData": 308,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "味噌でじっくり煮込んだコイ。味が中まで染みており、滋養強壮に良い。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 5,
+    "exp": 7
+  },
+  {
+    "recipeId": "bake_pike",
+    "method": "焼く",
+    "materials": {
+      "striped_pike": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 8,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "pike_skewers",
+      "name": "<パイクの串焼き>",
+      "material": "COOKED_SALMON",
+      "price": 0,
+      "sellPrice": 80,
+      "customModelData": 309,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "パイクの身を贅沢に刺した串焼き。ワイルドな味わいで力が湧いてくる。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 7,
+    "exp": 9
+  },
+  {
+    "recipeId": "bake_eel",
+    "method": "焼く",
+    "materials": {
+      "river_eel": {
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 10,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "grilled_eel",
+      "name": "<ウナギの蒲焼>",
+      "material": "COOKED_COD",
+      "price": 0,
+      "sellPrice": 80,
+      "customModelData": 310,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 0,
+      "description": "秘伝のタレで焼き上げたウナギ。SAOの世界でも屈指の高級スタミナ料理。"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_fish",
+      "name": "<生焼けの魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_fish",
+      "name": "<焦げすぎた魚>",
+      "material": "COD",
+      "price": 0,
+      "sellPrice": 10,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 9,
+    "exp": 12
+  },
+  {
+    "recipeId": "roasted_ox",
+    "method": "焼く",
+    "materials": {
+      "ox_beef": {
+        "id": "ox_beef",
+        "name": "<オックスの肉>",
+        "material": "BEEF",
+        "price": 0,
+        "sellPrice": 30,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "硬いめの牛肉",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 15,
+    "baseToleranceTicks": 5,
+    "difficulty": "C",
+    "successItem": {
+      "id": "roasted_ox",
+      "name": "<オックスのローストビーフ>",
+      "material": "COOKED_PORKCHOP",
+      "price": 70,
+      "sellPrice": 30,
+      "customModelData": 0,
+      "rank": "C",
+      "category": "食料",
+      "value1": 10,
+      "value2": 5,
+      "description": "オックスの肉をじ～っくり焼いたもの"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_ox_meat",
+      "name": "<生焼けオックスの肉>",
+      "material": "PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "焼きが足りなかったオックスの肉"
+    },
+    "failureLateItem": {
+      "id": "burnt_ox_meat",
+      "name": "<焦げたオックスの肉>",
+      "material": "COOKED_PORKCHOP",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 3,
+      "value2": 0,
+      "description": "オックスの肉が焦げたもの"
+    },
+    "requiredProficiency": 12,
+    "exp": 15
+  },
+  {
+    "recipeId": "maru_imo_chips",
+    "method": "揚げる",
+    "materials": {
+      "maru_imo": {
+        "id": "maru_imo",
+        "name": "<マルイモ>",
+        "material": "POTATO",
+        "price": 20,
+        "sellPrice": 30,
+        "customModelData": 0,
+        "rank": "D",
+        "category": "素材",
+        "value1": 0,
+        "value2": 0,
+        "description": "採れたてのマルイモ",
+        "amount": 1
+      }
+    },
+    "targetTimeSeconds": 3,
+    "baseToleranceTicks": 7,
+    "difficulty": "D",
+    "successItem": {
+      "id": "maru_imo_chips",
+      "name": "<マルイモのチップス>",
+      "material": "POTATO",
+      "price": 20,
+      "sellPrice": 40,
+      "customModelData": 0,
+      "rank": "D",
+      "category": "食料",
+      "value1": 5,
+      "value2": 5,
+      "description": "マルイモ揚げた食べ物"
+    },
+    "failureEarlyItem": {
+      "id": "undercooked_imo",
+      "name": "<生焼けのイモ>",
+      "material": "POTATO",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 300,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "火の通りが甘い。食べるとお腹を壊しそうだ。"
+    },
+    "failureLateItem": {
+      "id": "charred_imo",
+      "name": "<焦げすぎたイモ>",
+      "material": "POTATO",
+      "price": 0,
+      "sellPrice": 0,
+      "customModelData": 301,
+      "rank": "D",
+      "category": "食料",
+      "value1": 2,
+      "value2": 0,
+      "description": "炭のように真っ黒。もはや食べ物ではない。"
+    },
+    "requiredProficiency": 3,
+    "exp": 5
+  }
+]

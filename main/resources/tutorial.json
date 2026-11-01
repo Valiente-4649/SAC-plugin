@@ -1,0 +1,257 @@
+{
+  "SACの基礎": [
+    {
+      "message": [
+        "§b-チュートリアルを開始します-"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "teleport": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1013.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "damage": false,
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§bまずはmenuを持って右クリックしてください！",
+        "§b次にSkill Menuという剣のアイコンをクリックして、",
+        "§b右下の「スキル設定モード」を押しスキルスロットを選んで片手剣をセットしてください！",
+        "§bそしてスロットにセットされた片手剣スキルをクリックして",
+        "§bソードスキル「Vertical」をセットしてください！",
+        "§bソードスキルはしゃがみ+右クリックで発動できます！"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "items": {
+        "small_sword": 1,
+        "menu_item": 1
+      },
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§b敵モンスターは特殊攻撃を使用してきます！",
+        "§b特殊攻撃はステップ（しゃがみ２連打）で避けるか、",
+        "§b攻撃の瞬間に右クリックしてパリィしましょう！",
+        "§bパリィに成功するとダメージを受けず、",
+        "§b大きなアドバンテージを獲得できます！",
+        "それでは戦ってみましょう！"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§b倒せたら「次へ」をクリックしてください！"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "mobId": "frenzy_boar",
+      "mobLocation": {
+        "world": "world", "x": -46.5, "y": 93, "z": 1024.5
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "damage": true,
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§b今回は獲得できませんでしたが、モンスターを倒すとexp,col,アイテムが手に入ります！",
+        "§bcolを使用するとNPCショップで買い物が出来たり、",
+        "§b鍛造などの様々な場所でもcolを使います！",
+        "§bexpを溜めるとレベルが上がります！",
+        "§bレベルが上がるとスキルポイントを獲得でき、menuで割り振れます！"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§bプレイヤーの体力はポーション、転移門、セーフゾーンで「のみ」回復可能です！",
+        "§bHungerは食料ゲージを指しており、食料を食べることで回復します！",
+        "§b防具やアクセサリーはmenuから着脱可能です！",
+        "§bこれで基本は以上になります！",
+        "§b最後に..."
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§4ー死ねばデータはリセットー",
+        "§4プレイヤー諸君、慎重に挑め。"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§bそれではチュートリアルは以上になります！",
+        "§bお疲れさまでした！",
+        "§bby茅ヴァリ明彦"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 93.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": -46.5,
+        "y": 91.5,
+        "z": 1016.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "items": {
+        "tp_crystal": 1
+      },
+      "damage": false,
+      "endTutorial": false
+    },
+    {
+      "message": [
+        "§b終了を押してください！↓"
+      ],
+      "messageLocation": {
+        "world": "world",
+        "x": 8.5,
+        "y": 89,
+        "z": 250.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "teleport": {
+        "world": "world",
+        "x": 8.5,
+        "y": 87,
+        "z": 252.5,
+        "yaw": 180,
+        "pitch": 0
+      },
+      "nextButtonLocation": {
+        "world": "world",
+        "x": 8.5,
+        "y": 88,
+        "z": 250.5,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "items": {
+        "tp_crystal": 1
+      },
+      "damage": false,
+      "endTutorial": true
+    }
+  ]
+}

@@ -1,0 +1,1294 @@
+{
+  "vertical": {
+    "id": "vertical",
+    "name": "§bVertical",
+    "description": "単発　垂直斬り",
+    "order": 1,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.6,
+    "range": {
+      "forward": 6.0,
+      "backward": 0.0,
+      "width": 1.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "DOWN_MIDDLE"
+      }
+    ],
+    "motion": {
+      "type": "STEP",
+      "direction": "FORWARD"
+    }
+  },
+  "horizontal": {
+    "id": "horizontal",
+    "name": "§bHorizontal",
+    "description": "単発　横斬り",
+    "order": 2,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 3,
+    "damageMultiplier": 4.4,
+    "range": {
+      "forward": 4.0,
+      "backward": 0.0,
+      "width": 3.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "RIGHT"
+    }
+  },
+  "vertical_arc": {
+    "id": "vertical_arc",
+    "name": "§bVertical Arc",
+    "description": "２連撃　縦斬り",
+    "order": 3,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 7,
+    "damageMultiplier": 3.0,
+    "range": {
+      "forward": 6.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 3.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "UP_LEFT"
+      },
+      {
+        "position": "DOWN_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        }
+      ]
+    }
+  },
+  "horizontal_arc": {
+    "id": "horizontal_arc",
+    "name": "§bHorizontal Arc",
+    "description": "２連撃　左右往復斬り",
+    "order": 4,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 9,
+    "damageMultiplier": 3.5,
+    "range": {
+      "forward": 4.0,
+      "backward": 4.0,
+      "width": 6.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      },
+      {
+        "position": "DIAGONAL_UP_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        }
+      ]
+    }
+  },
+  "sonic_leap": {
+    "id": "sonic_leap",
+    "name": "§bSonic Leap",
+    "description": "単発　上段突技",
+    "order": 5,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 15,
+    "damageMultiplier": 6.0,
+    "range": {
+      "forward": 9.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 2.0
+    },
+    "cooldown": 12,
+    "chargeTime": 25,
+    "hits": 1,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "THRUST_UP"
+      }
+    ],
+    "motion": {
+      "type": "DASH",
+      "distance": 9.0
+    }
+  },
+  "horizontal_square": {
+    "id": "horizontal_square",
+    "name": "§bHorizontal Square",
+    "description": "４連撃　水平斬り",
+    "order": 15,
+    "category": "片手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 30,
+    "damageMultiplier": 3.5,
+    "range": {
+      "forward": 5.0,
+      "backward": 3.0,
+      "width": 6.0,
+      "height": 2.0
+    },
+    "cooldown": 20,
+    "chargeTime": 20,
+    "hits": 4,
+    "color": "#00FFFF",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      },
+      {
+        "position": "DIAGONAL_RIGHT_DOWN"
+      },
+      {
+        "position": "HORIZONTAL_TOP_LEFT"
+      },
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        }
+      ]
+    }
+  },
+  "linear": {
+    "id": "linear",
+    "name": "§bLinear",
+    "description": "単発　中段突き",
+    "order": 1,
+    "category": "細剣",
+    "requiredType": "Thrust",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.5,
+    "range": {
+      "forward": 8.0,
+      "backward": 0.0,
+      "width": 2.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#1EFF5A",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "STEP",
+      "direction": "FORWARD"
+    }
+  },
+  "streak": {
+    "id": "streak",
+    "name": "§bStreak",
+    "description": "単発　範囲斬り",
+    "order": 2,
+    "category": "細剣",
+    "requiredType": "Thrust",
+    "requiredProficiency": 3,
+    "damageMultiplier": 4.3,
+    "range": {
+      "forward": 6.0,
+      "backward": 4.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#1EFF5A",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "LEFT"
+    }
+  },
+  "parallel_sting": {
+    "id": "parallel_sting",
+    "name": "§bParallel Sting",
+    "description": "２連撃　中段突き",
+    "order": 3,
+    "category": "細剣",
+    "requiredType": "Thrust",
+    "requiredProficiency": 7,
+    "damageMultiplier": 2.8,
+    "range": {
+      "forward": 8.0,
+      "backward": 0.0,
+      "width": 2.0,
+      "height": 3.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#1EFF5A",
+    "slashes": [
+      {
+        "position": "THRUST_UP"
+      },
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        }
+      ]
+    }
+  },
+  "lemniscate": {
+    "id": "lemniscate",
+    "name": "§bLemniscate",
+    "description": "２連撃　X字斬り下ろし",
+    "order": 4,
+    "category": "細剣",
+    "requiredType": "Thrust",
+    "requiredProficiency": 9,
+    "damageMultiplier": 2.9,
+    "range": {
+      "forward": 6.0,
+      "backward": 0.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#1EFF5A",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      },
+      {
+        "position": "DIAGONAL_UP_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        }
+      ]
+    }
+  },
+  "quaternion": {
+    "id": "quaternion",
+    "name": "§bQuaternion",
+    "description": "４連撃　刺突技",
+    "order": 5,
+    "category": "細剣",
+    "requiredType": "Thrust",
+    "requiredProficiency": 15,
+    "damageMultiplier": 2.2,
+    "range": {
+      "forward": 8.0,
+      "backward": 0.0,
+      "width": 2.0,
+      "height": 3.0
+    },
+    "cooldown": 12,
+    "chargeTime": 20,
+    "hits": 4,
+    "color": "#1EFF5A",
+    "slashes": [
+      {
+        "position": "THRUST_UP_RIGHT"
+      },
+      {
+        "position": "THRUST_UP_LEFT"
+      },
+      {
+        "position": "THRUST_RIGHT"
+      },
+      {
+        "position": "THRUST_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        }
+      ]
+    }
+  },
+  "basic_bite": {
+    "id": "basic_bite",
+    "name": "§bBasic Bite",
+    "description": "単発　中段突進技",
+    "order": 1,
+    "category": "短剣",
+    "requiredProficiency": 1,
+    "damageMultiplier": 5.1,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#32CD32",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "DASH",
+      "distance": 5.0
+    }
+  },
+  "elementary_edge": {
+    "id": "elementary_edge",
+    "name": "§bElementary Edge",
+    "description": "単発　中段斬り",
+    "order": 2,
+    "category": "短剣",
+    "requiredProficiency": 3,
+    "damageMultiplier": 6.2,
+    "range": {
+      "forward": 4.0,
+      "backward": 0.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#32CD32",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "RIGHT"
+    }
+  },
+  "phantom_pierce": {
+    "id": "phantom_pierce",
+    "name": "§bPhantom Pierce",
+    "description": "２連撃　高速突き",
+    "order": 3,
+    "category": "短剣",
+    "requiredProficiency": 7,
+    "damageMultiplier": 4.3,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 1.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#32CD32",
+    "slashes": [
+      {
+        "position": "THRUST_UP"
+      },
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        }
+      ]
+    }
+  },
+  "viper_bite": {
+    "id": "viper_bite",
+    "name": "§bViper Bite",
+    "description": "２連撃　斬上斬下二連撃",
+    "order": 4,
+    "category": "短剣",
+    "requiredProficiency": 9,
+    "damageMultiplier": 4.9,
+    "range": {
+      "forward": 4.0,
+      "backward": 0.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#32CD32",
+    "slashes": [
+      {
+        "position": "UP_LEFT"
+      },
+      {
+        "position": "DOWN_MIDDLE"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        }
+      ]
+    }
+  },
+  "throat_step": {
+    "id": "throat_step",
+    "name": "§bThroat Step",
+    "description": "３連撃　中段突、回転斜下、回転水平斬り",
+    "order": 5,
+    "category": "短剣",
+    "requiredProficiency": 15,
+    "damageMultiplier": 4.3,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 5.0,
+      "height": 2.0
+    },
+    "cooldown": 12,
+    "chargeTime": 20,
+    "hits": 3,
+    "color": "#32CD32",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      },
+      {
+        "position": "DIAGONAL_RIGHT_DOWN"
+      },
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "STEP",
+          "direction": "FORWARD"
+        },
+        {
+          "type": "SPIN",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SPIN",
+          "direction": "RIGHT"
+        }
+      ]
+    }
+  },
+  "cyclone": {
+    "id": "cyclone",
+    "name": "§bCyclone",
+    "description": "単発　横旋回斬り",
+    "order": 1,
+    "category": "両手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.4,
+    "range": {
+      "forward": 7.0,
+      "backward": 0.0,
+      "width": 8.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#FF0000",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SPIN",
+      "direction": "RIGHT"
+    }
+  },
+  "collapse": {
+    "id": "collapse",
+    "name": "§bCollapse",
+    "description": "単発　横斬り",
+    "order": 2,
+    "category": "両手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 3,
+    "damageMultiplier": 3.9,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 7.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#FF0000",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "LEFT"
+    }
+  },
+  "surge": {
+    "id": "surge",
+    "name": "§bSurge",
+    "description": "単発　中段突進技",
+    "order": 3,
+    "category": "両手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 7,
+    "damageMultiplier": 4.3,
+    "range": {
+      "forward": 7.0,
+      "backward": 0.0,
+      "width": 2.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#FF0000",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "DASH",
+      "distance": 5.0
+    }
+  },
+  "subsidence": {
+    "id": "subsidence",
+    "name": "§bSubsidence",
+    "description": "単発　上段左右二連撃",
+    "order": 4,
+    "category": "両手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 9,
+    "damageMultiplier": 3.1,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 5.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#FF0000",
+    "slashes": [
+      {
+        "position": "DIAGONAL_RIGHT_DOWN"
+      },
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        }
+      ]
+    }
+  },
+  "backlash": {
+    "id": "backlash",
+    "name": "§bBacklash",
+    "description": "単発　背面水平斬り",
+    "order": 5,
+    "category": "両手剣",
+    "requiredType": "Slash",
+    "requiredProficiency": 15,
+    "damageMultiplier": 5.9,
+    "range": {
+      "forward": 2.0,
+      "backward": 6.0,
+      "width": 7.0,
+      "height": 2.0
+    },
+    "cooldown": 12,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#FF0000",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "SPIN",
+      "direction": "RIGHT"
+    }
+  },
+  "hougen": {
+    "id": "hougen",
+    "name": "§b法眼",
+    "description": "単発　上段斬り下ろし",
+    "order": 1,
+    "category": "刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 1,
+    "damageMultiplier": 2.0,
+    "range": {
+      "forward": 5,
+      "backward": 0,
+      "width": 1.5,
+      "height": 2
+    },
+    "cooldown": 8,
+    "chargeTime": 7,
+    "hits": 1,
+    "color": "#FFFFFF",
+    "slashes": [
+      {
+        "position": "DOWN_MIDDLE"
+      }
+    ],
+    "motion": {
+      "type": "NONE"
+    }
+  },
+  "usuyuki": {
+    "id": "usuyuki",
+    "name": "§b薄雪",
+    "description": "単発　中段胴斬り",
+    "order": 2,
+    "category": "刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 3,
+    "damageMultiplier": 1.5,
+    "range": {
+      "forward": 5,
+      "backward": 0,
+      "width": 5,
+      "height": 2
+    },
+    "cooldown": 8,
+    "chargeTime": 7,
+    "hits": 1,
+    "color": "#FFFFFF",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "NONE"
+    }
+  },
+  "nunobiki": {
+    "id": "nunobiki",
+    "name": "§b布引",
+    "description": "単発　突進中段逆胴斬り",
+    "order": 3,
+    "category": "刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 7,
+    "damageMultiplier": 2,
+    "range": {
+      "forward": 7,
+      "backward": 0,
+      "width": 3,
+      "height": 2
+    },
+    "cooldown": 10,
+    "chargeTime": 7,
+    "hits": 1,
+    "color": "#FFFFFF",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "NONE"
+    }
+  },
+  "kinyou": {
+    "id": "kinyou",
+    "name": "§b金葉",
+    "description": "２連撃　高速袈裟斬り逆袈裟",
+    "order": 4,
+    "category": "刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 9,
+    "damageMultiplier": 1.5,
+    "range": {
+      "forward": 5,
+      "backward": 0,
+      "width": 2,
+      "height": 2
+    },
+    "cooldown": 10,
+    "chargeTime": 7,
+    "hits": 2,
+    "color": "#FFFFFF",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      },
+      {
+        "position": "DIAGONAL_UP_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "NONE"
+        },
+        {
+          "type": "NONE"
+        }
+      ]
+    }
+  },
+  "seisui": {
+    "id": "seisui",
+    "name": "§b醒睡",
+    "description": "単発　無拍子突き",
+    "order": 5,
+    "category": "刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 15,
+    "damageMultiplier": 5.0,
+    "range": {
+      "forward": 7,
+      "backward": 0,
+      "width": 2,
+      "height": 2
+    },
+    "cooldown": 12,
+    "chargeTime": 4,
+    "hits": 1,
+    "color": "#FFFFFF",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "NONE"
+    }
+  },
+  "axis": {
+    "id": "axis",
+    "name": "§6Axis",
+    "description": "単発　中段直線突き",
+    "order": 1,
+    "category": "槍",
+    "requiredType": "Thrust",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.6,
+    "range": {
+      "forward": 9.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#DAA520",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "DASH",
+      "distance": 5.0
+    }
+  },
+  "apsis": {
+    "id": "apsis",
+    "name": "§6Apsis",
+    "description": "単発　横薙ぎ斬撃技",
+    "order": 2,
+    "category": "槍",
+    "requiredType": "Slash",
+    "requiredProficiency": 3,
+    "damageMultiplier": 4.5,
+    "range": {
+      "forward": 6.0,
+      "backward": 0.0,
+      "width": 8.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#DAA520",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "RIGHT"
+    }
+  },
+  "polaris_pointer": {
+    "id": "polaris_pointer",
+    "name": "§6Polaris Pointer",
+    "description": "単発　溜め突き",
+    "order": 3,
+    "category": "槍",
+    "requiredType": "Thrust",
+    "requiredProficiency": 7,
+    "damageMultiplier": 5.5,
+    "range": {
+      "forward": 11.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 1,
+    "color": "#DAA520",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "STEP",
+      "direction": "FORWARD"
+    }
+  },
+  "binary_phase": {
+    "id": "binary_phase",
+    "name": "§6Binary Phase",
+    "description": "２連撃　左右横薙ぎ斬り",
+    "order": 4,
+    "category": "槍",
+    "requiredType": "Slash",
+    "requiredProficiency": 9,
+    "damageMultiplier": 3.7,
+    "range": {
+      "forward": 6.0,
+      "backward": 3.0,
+      "width": 8.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#DAA520",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_MIDDLE_RIGHT"
+      },
+      {
+        "position": "HORIZONTAL_BOTTOM_LEFT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        }
+      ]
+    }
+  },
+  "lunar_eclipse": {
+    "id": "lunar_eclipse",
+    "name": "§6Lunar Eclipse",
+    "description": "２連撃　回転中段突き",
+    "order": 5,
+    "category": "槍",
+    "requiredType": "Thrust",
+    "requiredProficiency": 15,
+    "damageMultiplier": 4.2,
+    "range": {
+      "forward": 9.0,
+      "backward": 0.0,
+      "width": 1.5,
+      "height": 2.0
+    },
+    "cooldown": 12,
+    "chargeTime": 20,
+    "hits": 2,
+    "color": "#DAA520",
+    "slashes": [
+      {
+        "position": "THRUST_UP"
+      },
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SPIN",
+          "direction": "RIGHT"
+        },
+        {
+          "type": "SPIN",
+          "direction": "LEFT"
+        }
+      ]
+    }
+  },
+  "serve": {
+    "id": "serve",
+    "name": "§bServe",
+    "description": "単発　斜め斬り",
+    "order": 1,
+    "category": "曲刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.5,
+    "range": {
+      "forward": 4.0,
+      "backward": 0.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 10,
+    "hits": 1,
+    "color": "#4400FF",
+    "slashes": [
+      {
+        "position": "DIAGONAL_RIGHT_DOWN"
+      }
+    ],
+    "motion": {
+      "type": "SIDESTEP",
+      "direction": "RIGHT"
+    }
+  },
+  "reaper": {
+    "id": "reaper",
+    "name": "§bReaper",
+    "description": "単発　中段突進技",
+    "order": 2,
+    "category": "曲刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 3,
+    "damageMultiplier": 4.0,
+    "range": {
+      "forward": 7.0,
+      "backward": 0.0,
+      "width": 2.0,
+      "height": 2.0
+    },
+    "cooldown": 8,
+    "chargeTime": 10,
+    "hits": 1,
+    "color": "#4400FF",
+    "slashes": [
+      {
+        "position": "THRUST_"
+      }
+    ],
+    "motion": {
+      "type": "DASH",
+      "distance": 5.0
+    }
+  },
+  "double_moon": {
+    "id": "double_moon",
+    "name": "§bDouble Moon",
+    "description": "２連撃　下段斬撃",
+    "order": 3,
+    "category": "曲刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 7,
+    "damageMultiplier": 3.0,
+    "range": {
+      "forward": 5.0,
+      "backward": 0.0,
+      "width": 5.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 10,
+    "hits": 2,
+    "color": "#4400FF",
+    "slashes": [
+      {
+        "position": "DIAGONAL_LEFT_DOWN"
+      },
+      {
+        "position": "HORIZONTAL_BOTTOM_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "COMBO",
+      "steps": [
+        {
+          "type": "SIDESTEP",
+          "direction": "LEFT"
+        },
+        {
+          "type": "SIDESTEP",
+          "direction": "RIGHT"
+        }
+      ]
+    }
+  },
+  "devoto": {
+    "id": "devoto",
+    "name": "§bDevoto",
+    "description": "単発　回転斬り上げ",
+    "order": 4,
+    "category": "曲刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 9,
+    "damageMultiplier": 5.7,
+    "range": {
+      "forward": 4.0,
+      "backward": 4.0,
+      "width": 4.0,
+      "height": 2.0
+    },
+    "cooldown": 10,
+    "chargeTime": 10,
+    "hits": 1,
+    "color": "#4400FF",
+    "slashes": [
+      {
+        "position": "DIAGONAL_UP_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SPIN",
+      "direction": "RIGHT"
+    }
+  },
+  "cutdown_sickle": {
+    "id": "cutdown_sickle",
+    "name": "§bCutdown Sickle",
+    "description": "単発　全方位範囲回転斬り",
+    "order": 5,
+    "category": "曲刀",
+    "requiredType": "Slash",
+    "requiredProficiency": 15,
+    "damageMultiplier": 6.7,
+    "range": {
+      "forward": 6.0,
+      "backward": 6.0,
+      "width": 6.0,
+      "height": 2.0
+    },
+    "cooldown": 12,
+    "chargeTime": 10,
+    "hits": 1,
+    "color": "#4400FF",
+    "slashes": [
+      {
+        "position": "HORIZONTAL_BOTTOM_RIGHT"
+      }
+    ],
+    "motion": {
+      "type": "SPIN",
+      "direction": "RIGHT"
+    }
+  },
+  "taijutsu_mid_combo": {
+    "id": "taijutsu_mid_combo",
+    "name": "§6中段連打拳",
+    "description": "３連撃　中段を狙う正拳の連打",
+    "order": 1,
+    "category": "体術",
+    "requiredType": "Strike",
+    "requiredProficiency": 1,
+    "damageMultiplier": 3.5,
+    "range": {
+      "forward": 2.5,
+      "backward": 0.0,
+      "width": 1.8,
+      "height": 1.5
+    },
+    "cooldown": 15,
+    "chargeTime": 3,
+    "hits": 3,
+    "color": "#FF6600",
+    "slashes": [
+      {
+        "position": "WAVE_MID"
+      },
+      {
+        "position": "WAVE_MID"
+      },
+      {
+        "position": "WAVE_MID"
+      }
+    ]
+  },
+  "taijutsu_low_sweep": {
+    "id": "taijutsu_low_sweep",
+    "name": "§6下段払い蹴り",
+    "description": "単発　足元を薙ぎ払う波動蹴り",
+    "order": 2,
+    "category": "体術",
+    "requiredType": "Strike",
+    "requiredProficiency": 3,
+    "damageMultiplier": 4.0,
+    "range": {
+      "forward": 2.8,
+      "backward": 0.0,
+      "width": 2.2,
+      "height": 1.0
+    },
+    "cooldown": 15,
+    "chargeTime": 3,
+    "hits": 1,
+    "color": "#FF6600",
+    "slashes": [
+      {
+        "position": "WAVE_LOW"
+      }
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "start_weapon": {
+    "id": "start_weapon",
+    "name": "《武器屋》",
+    "type": "weapon",
+    "items": [
+      "small_sword",
+      "bronze_sword",
+      "small_rapier",
+      "bronze_rapier",
+      "small_dagger",
+      "bronze_dagger",
+      "small_greatsword",
+      "bronze_greatsword",
+      "small_spear",
+      "bronze_spear",
+      "small_scimitar",
+      "bronze_scimitar"
+    ]
+  },
+  "start_armor": {
+    "id": "start_armor",
+    "name": "《防具屋》",
+    "type": "armor",
+    "items": [
+      "leather_cap",
+      "leather_tunic",
+      "leather_arm",
+      "leather_pants",
+      "leather_boots"
+    ]
+  },
+  "start_food_shop": {
+    "id": "start_food_shop",
+    "name": "《雑貨屋》",
+    "type": "general",
+    "items": [
+      "hard_bread",
+      "low_potion",
+      "tp_crystal"
+    ]
+  },
+  "horunka_weapon": {
+    "id": "horunka_weapon",
+    "name": "《武器屋》",
+    "type": "weapon",
+    "items": [
+      "small_sword",
+      "bronze_sword",
+      "steel_blade",
+      "small_rapier",
+      "bronze_rapier",
+      "steel_rapier",
+      "small_dagger",
+      "bronze_dagger",
+      "steel_dagger",
+      "small_greatsword",
+      "bronze_greatsword",
+      "steel_greatblade",
+      "small_spear",
+      "bronze_spear",
+      "steel_spear",
+      "small_scimitar",
+      "bronze_scimitar",
+      "steel_scimitar"
+    ]
+  },
+  "horunka_food_shop": {
+    "id": "horunka_food_shop",
+    "name": "《雑貨屋》",
+    "type": "general",
+    "items": [
+      "hard_bread",
+      "boar_steak",
+      "low_potion",
+      "tp_crystal"
+    ]
+  },
+  "tool_food_shop": {
+    "id": "tool_food_shop",
+    "name": "《雑貨屋》",
+    "type": "general",
+    "items": [
+      "hard_bread",
+      "boar_steak",
+      "boar_stew",
+      "simmered_dire_meat",
+      "low_potion",
+      "tp_crystal",
+      "kobold_lord_fang"
+    ]
+  },
+  "urubasu_weapon": {
+    "id": "urubasu_weapon",
+    "name": "《武器屋》",
+    "type": "weapon",
+    "items": [
+      "steel_blade",
+      "rock_sword",
+      "steel_rapier",
+      "rock_rapier",
+      "steel_dagger",
+      "rock_dagger",
+      "steel_greatblade",
+      "rock_greatsword",
+      "banjaku_to",
+      "steel_spear",
+      "rock_spear",
+      "steel_scimitar",
+      "rock_scimitar"
+    ]
+  },
+  "urubasu_food_shop": {
+    "id": "urubasu_food_shop",
+    "name": "《雑貨屋》",
+    "type": "general",
+    "items": [
+      "roasted_ox",
+      "low_potion",
+      "potion",
+      "tp_crystal",
+      "asterios_crown"
+    ]
+  },
+  "urubasu_armor": {
+    "id": "urubasu_armor",
+    "name": "《防具屋》",
+    "type": "armor",
+    "items": [
+      "steel_helmet",
+      "steel_chestplate",
+      "steel_arm",
+      "steel_leggings",
+      "steel_boots"
+    ]
+  },
+  "zumfut_weapon": {
+    "id": "zumfut_weapon",
+    "name": "《武器屋》",
+    "type": "weapon",
+    "items": [
+      "verdant_blade",
+      "verdant_rapier",
+      "verdant_dagger",
+      "verdant_greatblade",
+      "verdant_spear",
+      "verdant_scimitar"
+    ]
+  },
+  "zumfut_food_shop": {
+    "id": "zumfut_food_shop",
+    "name": "《雑貨屋》",
+    "type": "general",
+    "items": [
+      "roasted_ox",
+      "low_potion",
+      "potion",
+      "tp_crystal"
+    ]
+  },
+  "zumfut_armor": {
+    "id": "zumfut_armor",
+    "name": "《防具屋》",
+    "type": "armor",
+    "items": [
+      "steel_helmet",
+      "steel_chestplate",
+      "steel_arm",
+      "steel_leggings",
+      "steel_boots"
+    ]
+  }
+}

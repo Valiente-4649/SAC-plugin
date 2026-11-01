@@ -1,0 +1,72 @@
+name: SACplugin
+version: '1.0'
+main: sac.plugin.info.SACplugin.SACplugin
+api-version: '1.21.1'
+softdepend: [NuVotifier, Vtifier]
+
+commands:
+  sac:
+    description: SAOメインシステム（武器配布・モブ召喚）
+    usage: /sac <give/spawn/add> <引数...>
+  skillpoint:
+    description: Open skill point menu
+
+  tutorial:
+    description:
+    usage:
+
+  partyaccept:
+    description: パーティー参加
+  partydeny:
+    description: パーティー拒否
+
+  friendaccept:
+    description: フレンド承認
+  frienddeny:
+    description: フレンド拒否
+
+  bosstp:
+    description: ボス部屋の入り口ホログラムを設置します。
+    usage: /bosstp
+  bossremove:
+    description: 周辺のボス部屋の入り口ホログラムを削除します。
+    usage: /bossremove
+  treasure:
+    description: 宝箱を設置します（OP限定）。
+    usage: /treasure <宝箱名> <報酬Col> <報酬EXP>
+  treasureremove:
+    description: 近くの宝箱を削除します（OP限定）。
+    usage: /treasureremove
+  treasureresetall:
+    description: 全宝箱の開封履歴を一括リセットします（OP限定）。
+    usage: /treasureresetall confirm
+  safezone:
+    description: HP自動回復地点(セーフゾーン)を設置します（OP限定）。
+    usage: /safezone <名前> [半径(省略時20)]
+  safezoneremove:
+    description: 近くのセーフゾーンを削除します（OP限定）。
+    usage: /safezoneremove
+  appraisalnpc:
+    description: 鑑定NPCを設置します（OP限定）。
+    usage: /appraisalnpc spawn
+  accessoryforge:
+    description: アクセサリー加工台を設置・削除します（OP限定）。
+    usage: /accessoryforge <spawn/remove>
+  deathboard:
+    description: 死亡回数ランキング表示を設置・削除します（OP限定）。
+    usage: /deathboard <spawn/remove>
+  fishingspot:
+    description: 釣りスポットをランク指定で設置します（OP限定）。
+    usage: /fishingspot <C/B/A/S>
+  daily:
+    description: デイリーおじさん・デイリー宝箱地点の設置、再抽選、クリア状況リセット（OP限定）。
+    usage: /daily <setnpc/setspot/reload/reset> <floor/プレイヤー名>
+  sacreload:
+    description: SACpluginのJSON/YML設定をサーバー再起動なしで再読み込みします（OP限定）。
+    usage: /sacreload
+
+
+permissions:
+  sao.admin:
+    description: SAOの管理者権限
+    default: op

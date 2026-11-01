@@ -1,0 +1,79 @@
+[
+  {
+    "floor": 1,
+    "world": "world",
+    "killMobIds": [
+      "frenzy_boar",
+      "little_nepenthes",
+      "kobold_henchman",
+      "dire_wolf",
+      "ruin_kobold_trooper"
+    ],
+    "deliveryItemIds": [
+      "boar_meat",
+      "boar_steak",
+      "boar_fang",
+      "boar_claws",
+      "red_petals",
+      "axe_fragment",
+      "cows_milk",
+      "carrot",
+      "dire_wolf_claws",
+      "dire_wolf_fang",
+      "dire_wolf_meat"
+    ],
+    "rewardItemIds": [
+      "boar_meat",
+      "boar_steak",
+      "boar_fang",
+      "boar_claws",
+      "red_petals",
+      "axe_fragment",
+      "cows_milk",
+      "carrot",
+      "dire_wolf_claws",
+      "dire_wolf_fang",
+      "dire_wolf_meat",
+      "small_trout",
+      "lake_smelt",
+      "pond_crucian",
+      "spotted_goby",
+      "river_dace",
+      "green_bass",
+      "forest_salmon",
+      "shimmering_carp",
+      "striped_pike",
+      "river_eel"
+    ],
+    "minAmount": 1,
+    "maxAmount": 10,
+    "npcName": "デイリーおじさん-第1層-"
+  },
+  {
+    "floor": 2,
+    "world": "floor2",
+    "killMobIds": [
+      "trembling_ox",
+      "jagged_worm",
+      "wind_wasp",
+      "lesser_taurus_striker"
+    ],
+    "deliveryItemIds": [
+      "ox_beef",
+      "hard_rock_material",
+      "jagged_fluids",
+      "taurus_fragment",
+      "roasted_ox"
+    ],
+    "rewardItemIds": [
+      "ox_beef",
+      "hard_rock_material",
+      "jagged_fluids",
+      "taurus_fragment",
+      "roasted_ox"
+    ],
+    "minAmount": 1,
+    "maxAmount": 10,
+    "npcName": "デイリーおじさん-第2層-"
+  }
+]

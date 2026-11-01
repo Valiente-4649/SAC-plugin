@@ -1,0 +1,748 @@
+{
+  "quest_boar_hunter": {
+    "id": "quest_boar_hunter",
+    "floor": 1,
+    "questName": "はじめての討伐依頼",
+    "npcName": "§a始まりの街 農家",
+    "descriptions": [
+      "私は農家を営んでいるんだが…",
+      "最近ボアが増えすぎて畑が荒らされるんだ！",
+      "許せん！ボアを懲らしめてくれ！",
+      "報酬は払うぜ！頼んだぞ！"
+    ],
+    "completedDescriptions": [
+      "ボアがゴミのようだ！",
+      "これが報酬だ！うちで採れた野菜だよ！",
+      "また何かあったら頼むぜ！"
+    ],
+    "type": "MOB", //mobを倒すのか、itemを納品するのか
+    "targetId": "frenzy_boar", //mobまたはitemのid
+    "requiredAmount": 10, //必要数
+    "rewardCol": 70, //報酬col
+    "rewardExp": 90, //報酬exp
+    "rewardItemId": "carrot", //報酬itemのid
+    "rewardItemAmount": 7 //報酬itemの個数
+  },
+  "quest_boar_meat": {
+    "id": "quest_boar_meat",
+    "floor": 1,
+    "questName": "新鮮なボア肉を求めて！",
+    "npcName": "§a料理人",
+    "descriptions": [
+      "あぁ、そこの君！",
+      "最高のステーキを焼きたいんだが、",
+      "新鮮な肉が足りなくてね。",
+      "ボアの肉を10個持ってきてくれないか？"
+    ],
+    "completedDescriptions": [
+      "ありがとう！これで沢山のステーキを焼ける！",
+      "報酬はステーキのお裾分けと、少しcolをあげよう！",
+      "また何かあったら頼むよ！"
+    ],
+    "type": "ITEM",
+    "targetId": "boar_meat",
+    "requiredAmount": 10,
+    "rewardCol": 150,
+    "rewardExp": 100,
+    "rewardItemId": "boar_steak",
+    "rewardItemAmount": 7
+  },
+  "sylvan_remedy": {
+    "id": "sylvan_remedy",
+    "floor": 1,
+    "questName": "森の秘薬",
+    "npcName": "§aホルンカ村 農家",
+    "descriptions": [
+      "そこの冒険者さま！",
+      "私の娘が病気になってもう何年も経つんです…",
+      "この病気を治すには秘薬が必要で…",
+      "秘薬を作るために必要な「ネペントの胚珠」を採ってきてくれませんか！"
+    ],
+    "completedDescriptions": [
+      "採ってきてくださったのですね！これで娘の笑顔がまた見れる！",
+      "感謝の印と言ってもなんですが、",
+      "私の家に代々伝わる剣をお譲りします！",
+      "本当にありがとうございます！"
+    ],
+    "type": "ITEM",
+    "targetId": "nepenthes_ovule",
+    "requiredAmount": 1,
+    "rewardCol": 0,
+    "rewardExp": 150,
+    "rewardItemId": "",
+    "rewardItemAmount": 1,
+    "rewardChoices": [   //選べる武器のidリストにする
+      "anneal_blade",
+      "anneal_rapier",
+      "anneal_dagger",
+      "anneal_greatblade",
+      "anneal_spear",
+      "anneal_scimitar"
+    ]
+  },
+  "quest_boar_fang": {
+    "id": "quest_boar_fang",
+    "floor": 1,
+    "questName": "良質なボアの牙を！",
+    "npcName": "§aボアハンター",
+    "descriptions": [
+      "私はボア専門の猛獣ハンターだ！",
+      "ここ最近良質な牙が手に入らなくて困ってるんだ！",
+      "報酬は弾むぜ！捕ってきてくれ！"
+    ],
+    "completedDescriptions": [
+      "おお！良質な牙だな！ありがとう！",
+      "これが報酬だ！受け取ってくれ！",
+      "また何かあったら頼むぜ！"
+    ],
+    "type": "ITEM",
+    "targetId": "boar_fang",
+    "requiredAmount": 4,
+    "rewardCol": 400,
+    "rewardExp": 150,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_axe_fragment": {
+    "id": "quest_axe_fragment",
+    "floor": 1,
+    "questName": "コボルドヘンチマンの討伐依頼",
+    "npcName": "§aホルンカ村　炭鉱夫",
+    "descriptions": [
+      "私は北の洞窟で炭鉱夫をしている！",
+      "最近コボルドヘンチマンがあの洞窟を縄張りにしていて…",
+      "仕事をしようにもできないんだ…",
+      "どうかやつらを懲らしめてくれ！"
+    ],
+    "completedDescriptions": [
+      "懲らしめてくれたのか！",
+      "ありがとう！",
+      "これでまた仕事ができる！",
+      "仕事がずっとできておらず、金は渡せないが…",
+      "この綺麗な結晶をやるよ！"
+    ],
+    "type": "MOB",
+    "targetId": "kobold_henchman",
+    "requiredAmount": 20,
+    "rewardCol": 0,
+    "rewardExp": 150,
+    "rewardItemId": "tp_crystal",
+    "rewardItemAmount": 1
+  },
+  "quest_wolf_claws": {
+    "id": "quest_wolf_claws",
+    "floor": 1,
+    "questName": "ウルフのレアドロは爪だがー？",
+    "npcName": "§aトールバーナ コレクター",
+    "descriptions": [
+      "私はレアな物が大好きなコレクターだ！",
+      "ボアの爪と雌牛のミルクは手に入れたが…",
+      "ウルフの爪がまだだ！",
+      "取ってきてくれ！報酬は弾む弾むぅ！"
+    ],
+    "completedDescriptions": [
+      "これがウルフの爪か！",
+      "ありがとうな！満足だぜ！",
+      "俺の報酬だ！受け取ってくれ！"
+    ],
+    "type": "ITEM",
+    "targetId": "dire_wolf_claws",
+    "requiredAmount":1,
+    "rewardCol":600,
+    "rewardExp":150,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_red_petal": {
+    "id": "quest_red_petal",
+    "floor": 1,
+    "questName": "鮮やかな赤色を求めて",
+    "npcName": "§aホルンカ村 裁縫師",
+    "descriptions": [
+      "最近、赤いドレスの注文が入ったの！",
+      "でも、染料にする『ネペントの花弁』が足りなくて…",
+      "リトルネペントはとても私じゃ倒せなくて。",
+      "お願い！いくつか集めてきてくれないかしら？"
+    ],
+    "completedDescriptions": [
+      "わぁ！とっても綺麗な赤色！",
+      "これで素敵なドレスが仕立てられそう！",
+      "これ、お礼よ！本当にありがとう！"
+    ],
+    "type": "ITEM",
+    "targetId": "red_petals",
+    "requiredAmount": 10,
+    "rewardCol": 150,
+    "rewardExp": 100,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_nepenthes_cull": {
+    "id": "quest_nepenthes_cull",
+    "floor": 1,
+    "questName": "森の植物にはご用心",
+    "npcName": "§aホルンカ村 警備兵",
+    "descriptions": [
+      "最近、森の入り口付近にリトルネペントが異常発生しているんだ。",
+      "旅人が襲われる事件も増えていてね。",
+      "すまないが、少し数を減らしてきてくれないか？",
+      "村の安全のために頼む！"
+    ],
+    "completedDescriptions": [
+      "討伐完了したか！助かったよ！",
+      "これで村人たちも安心して森に近づける。",
+      "君はなかなか腕が立つな。報酬を受け取ってくれ！"
+    ],
+    "type": "MOB",
+    "targetId": "little_nepenthes",
+    "requiredAmount": 15,
+    "rewardCol": 200,
+    "rewardExp": 150,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_wolf_howl": {
+    "id": "quest_wolf_howl",
+    "floor": 1,
+    "questName": "遠吠えは夜の恐怖",
+    "npcName": "§aトールバーナ 衛兵",
+    "descriptions": [
+      "夜になるとダイアウルフの遠吠えがうるさくて、",
+      "住人たちが夜も眠れないと怯えているんだ。",
+      "群れが街に近づく前に、討伐してきてほしい！",
+      "報酬は防衛費から出すから頼んだぞ！"
+    ],
+    "completedDescriptions": [
+      "おお！無事に帰ってきたか！",
+      "今夜からは静かな夜を過ごせそうだ。",
+      "ご苦労だった、これが報酬だ！"
+    ],
+    "type": "MOB",
+    "targetId": "dire_wolf",
+    "requiredAmount": 12,
+    "rewardCol": 250,
+    "rewardExp": 200,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_wolf_meat": {
+    "id": "quest_wolf_meat",
+    "floor": 1,
+    "questName": "兵士たちのスタミナ飯",
+    "npcName": "§aトールバーナ 料理番",
+    "descriptions": [
+      "街を警備する兵士たちから、もっとガッツリした飯を要求されててな。",
+      "ダイアウルフの肉を使えば、最高の角煮ができるんだ！",
+      "少し手強い相手だが、肉を取ってきてくれないか？",
+      "お前さんの分の角煮も用意しておくからよ！"
+    ],
+    "completedDescriptions": [
+      "いい匂いだろう？特製ダイアウルフ角煮の完成だ！",
+      "ほら、約束の報酬と、ダイアウルフの角煮だ！",
+      "味には自身あるんだぜ！"
+    ],
+    "type": "ITEM",
+    "targetId": "dire_wolf_meat",
+    "requiredAmount": 8,
+    "rewardCol": 200,
+    "rewardExp": 150,
+    "rewardItemId": "simmered_dire_meat",
+    "rewardItemAmount": 3
+  },
+  "quest_wolf_fang_accessory": {
+    "id": "quest_wolf_fang_accessory",
+    "floor": 1,
+    "questName": "強さの証明",
+    "npcName": "§a駆け出しの彫金師",
+    "descriptions": [
+      "俺、いつか最強のアクセサリー職人になるのが夢なんだ！",
+      "その第一歩として、ダイアウルフの牙を使ったネックレスを作りたい！",
+      "でも俺、戦いはからっきしでさ…",
+      "冒険者さん、俺の代わりに牙を取ってきてくれないか！？"
+    ],
+    "completedDescriptions": [
+      "すげえ！こんなに鋭くて立派な牙！",
+      "これなら最高のネックレスが作れるぜ！",
+      "ありがとう！いつか俺の作ったアクセ、買ってくれよな！"
+    ],
+    "type": "ITEM",
+    "targetId": "dire_wolf_fang",
+    "requiredAmount": 3,
+    "rewardCol": 300,
+    "rewardExp": 120,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_boar_claw_farm": {
+    "id": "quest_boar_claw_farm",
+    "floor": 1,
+    "questName": "農作業の意外な代用品",
+    "npcName": "§a始まりの街 開拓民",
+    "descriptions": [
+      "新しい畑を耕したいんだが、クワの先が折れちまってよ。",
+      "鉄を買う金もないし、困ってたんだが…",
+      "そうだ！ボアの爪を括り付ければ代用できるかもしれねえ！",
+      "悪いが、ボアの爪をいくつか集めてきてくれないか？"
+    ],
+    "completedDescriptions": [
+      "おお、これなら硬い土もザクザク掘れそうだ！",
+      "冒険者ってのは何でも解決してくれんだな！",
+      "少ないが、俺のなけなしの金だ。受け取ってくれ！"
+    ],
+    "type": "ITEM",
+    "targetId": "boar_claws",
+    "requiredAmount": 5,
+    "rewardCol": 100,
+    "rewardExp": 80,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_scrap_iron": {
+    "id": "quest_scrap_iron",
+    "floor": 1,
+    "questName": "スクラップの再利用",
+    "npcName": "§a見習い鍛冶師",
+    "descriptions": [
+      "親方に『とにかく鉄を叩いて練習しろ！』って言われたんだけど、",
+      "練習用の鉄鉱石を買うお金もなくてさ…",
+      "ルインコボルドトルーパーが落とす『斧の破片』なら、",
+      "溶かせば良い練習用の鉄になるんだ！集めてきてくれないか？"
+    ],
+    "completedDescriptions": [
+      "こんなにたくさんの破片を！？助かるよ！",
+      "これで朝までぶっ通しで鉄叩きの練習ができる！",
+      "よし、親方を見返してやるぞー！ありがとうな！"
+    ],
+    "type": "ITEM",
+    "targetId": "axe_fragment",
+    "requiredAmount": 10,
+    "rewardCol": 600,
+    "rewardExp": 200,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_ruin_trooper_hunt": {
+    "id": "quest_ruin_trooper_hunt",
+    "floor": 1,
+    "questName": "迷宮区の道作り",
+    "npcName": "§aトールバーナ　迷宮区探検家",
+    "descriptions": [
+      "俺は第一層迷宮区のルートを開拓しているものだ！",
+      "だが、道中にルインコボルドトルーパーがうろついていて危険だ。",
+      "お前さん、少し腕に自信がありそうだな？",
+      "やつらを討伐して、ルートの安全を確保してくれ！"
+    ],
+    "completedDescriptions": [
+      "無事に討伐してくれたようだな、助かった！",
+      "これで開拓を安全に進めることができる。",
+      "お前さんも、いつか迷宮区に挑んでくれ！"
+    ],
+    "type": "MOB",
+    "targetId": "ruin_kobold_trooper",
+    "requiredAmount": 15,
+    "rewardCol": 300,
+    "rewardExp": 200,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_tollbana_defense": {
+    "id": "quest_tollbana_defense",
+    "floor": 1,
+    "questName": "トールバーナの防衛線",
+    "npcName": "§aトールバーナ 武器商人",
+    "descriptions": [
+      "最近、街の近くまでコボルド・ヘンチマンが降りてきてるらしいな。",
+      "自警団の武器を補強したいんだが、鉄が足りねえ。",
+      "ヘンチマンどもを倒して『斧の破片』を奪ってきてくれ！",
+      "街の安全を守るためだ、頼んだぞ！"
+    ],
+    "completedDescriptions": [
+      "よしよし、これだけあれば武器の補強には十分だ。",
+      "やつらの武器を溶かして、やつらを倒す剣を作る！",
+      "いい仕事だったぜ、これは手間賃だ！"
+    ],
+    "type": "ITEM",
+    "targetId": "axe_fragment",
+    "requiredAmount": 15,
+    "rewardCol": 600,
+    "rewardExp": 250,
+    "rewardItemId": "",
+    "rewardItemAmount": 1,
+    "rewardChoices": [   //選べる武器のidリストにする
+      "steel_blade",
+      "steel_rapier",
+      "steel_dagger",
+      "steel_greatblade",
+      "steel_spear",
+      "steel_scimitar"
+    ]
+  },
+  "quest_reverse_cow": {
+    "id": "quest_reverse_cow",
+    "floor": 1,
+    "questName": "逆襲の雌牛",
+    "npcName": "§aホルンカ村 酪農家",
+    "descriptions": [
+      "少し前までは『迷子の仔牛』を探すだけの平和な依頼だったんだが…",
+      "最近、仔牛を探しに行った者がコボルド・ヘンチマンの群れに襲撃される事件が起きていてな。",
+      "どうやらやつら、雌牛を襲って奪ったミルクを囮にして、人間を待ち伏せているらしいんだ！",
+      "罠だと分かっていて頼むのは心苦しいが…奪われた『雌牛のミルク』を取り返してきてくれないか！？"
+    ],
+    "completedDescriptions": [
+      "おお、これぞホルンカ村特産の『雌牛のミルク』！",
+      "まさか本当にあのコボルドの凶悪な待ち伏せを打ち破って生還するとは…！",
+      "あんた相当な腕前だな！これは特別報酬のパンだ、ミルクと一緒にたっぷりと味わってくれ！"
+    ],
+    "type": "ITEM",
+    "targetId": "cows_milk",
+    "requiredAmount": 1,
+    "rewardCol": 350,
+    "rewardExp": 250,
+    "rewardItemId": "milk_bread",
+    "rewardItemAmount": 5
+  },
+  "quest_taijutsu": {
+    "id": "quest_taijutsu",
+    "floor": 2,
+    "questName": "体術修行",
+    "npcName": "§aひげ師匠",
+    "descriptions": [
+      "なんだお前、弟子入りしたいのか？",
+      "なら硬ぇ岩砕いてみせろ！",
+      "体術の修行はそれからや！"
+    ],
+    "completedDescriptions": [
+      "ほぉ？砕いてきやがったか！",
+      "約束守ってくれたならこっちも守らねぇとな！",
+      "実を言うと、もうお前は体術の基礎を会得できてる！試してみな！"
+    ],
+    "type": "ITEM",
+    "targetId": "hard_rock_material",
+    "requiredAmount": 300,
+    "rewardCol": 0,
+    "rewardExp": 0,
+    "rewardItemId": "",
+    "rewardItemAmount": 0,
+    "rewardSkillUnlock": "体術"
+  },
+  "quest_Blacksmith_ulbas": {
+    "id": "quest_Blacksmith_ulbas",
+    "floor": 2,
+    "questName": "強固な素材",
+    "npcName": "§aウルバスの鍛冶職人",
+    "descriptions": [
+      "よぉ！私はここの鍛冶師をやっている者だ",
+      "実は今武器・防具に使う硬い素材が足りなくてな",
+      "申し訳ないが取ってきてはくれんか？",
+      "報酬は期待しておいてくれ！"
+    ],
+    "completedDescriptions": [
+      "本当に助かったぜ！",
+      "流石は冒険者！仕事が早いな！",
+      "素材少し分けてやるよ！ありがとな！"
+    ],
+    "type": "ITEM",
+    "targetId": "hard_rock_material",
+    "requiredAmount": 12,
+    "rewardCol": 240,
+    "rewardExp": 200,
+    "rewardItemId": "hard_rock_material",
+    "rewardItemAmount": 3
+  },
+  "quest_Doctor_malome": {
+    "id": "quest_Doctor_malome",
+    "floor": 2,
+    "questName": "危険！ビリビリ！",
+    "npcName": "§a勉強熱心な医師",
+    "descriptions": [
+      "やぁ。君はぁ。見た感じかなり腕がたつ冒険者のようだ。",
+      "少し頼みがあるんだが。ジャギッドワームが落とす",
+      "体液を持ってきてくれないか？",
+      "パラライズについて研究中でして...お願いします"
+    ],
+    "completedDescriptions": [
+      "ありがとうございます！",
+      "実はあのワームの体液にはなにやら",
+      "パラライズを緩和する効果があるみたいでね",
+      "まぁまだ研究段階なのですが...こちら報酬です。",
+      "暖かいミルクは好きですか？"
+    ],
+    "type": "ITEM",
+    "targetId": "jagged_fluids",
+    "requiredAmount": 8,
+    "rewardCol": 240,
+    "rewardExp": 200,
+    "rewardItemId": "hot_milk",
+    "rewardItemAmount": 2
+  },
+  "quest_Dad_malome": {
+    "id": "quest_Dad_malome",
+    "floor": 2,
+    "questName": "空飛ぶ蟲の恐怖",
+    "npcName": "§a心配性な父親",
+    "descriptions": [
+      "あぁ！君は冒険者かね？頼みたいことがあるんだ！",
+      "タラン村に息子がいるから行きたいんだが",
+      "道中ハチが大量にいて行きたくても行けないんだ...",
+      "狩ってきてはくれぬか？"
+    ],
+    "completedDescriptions": [
+      "おぉ～ありがとう！",
+      "以前より数は減ったから会いに行ける！",
+      "本当に助かった！"
+    ],
+    "type": "MOB",
+    "targetId": "wind_wasp",
+    "requiredAmount": 10,
+    "rewardCol": 430,
+    "rewardExp": 300,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_Meat_talan": {
+    "id": "quest_Meat_talan",
+    "floor": 2,
+    "questName": "お肉大好き！",
+    "npcName": "§aお肉好きのおじさん",
+    "descriptions": [
+      "お肉を求めて三千里...",
+      "私は肉を求め、先を進むじじぃじゃ",
+      "そこで！この場所には何やらオックスの肉があるらしいじゃないか",
+      "すまぬが持ってきてはくれぬか？"
+    ],
+    "completedDescriptions": [
+      "おぉ！これがオックスの肉！",
+      "なんともボリューミー！この脂身！最高じゃ！",
+      "ありがとな。",
+      "ほれ焼きたてをお主にもやろう！"
+    ],
+    "type": "ITEM",
+    "targetId": "ox_beef",
+    "requiredAmount": 5,
+    "rewardCol": 260,
+    "rewardExp": 210,
+    "rewardItemId": "roasted_ox",
+    "rewardItemAmount": 2
+  },
+  "quest_Merchant_ulbas": {
+    "id": "quest_Merchant_ulbas",
+    "floor": 2,
+    "questName": "あの蛇野郎をどうにかして！",
+    "npcName": "§a爬虫類嫌いの商人",
+    "descriptions": [
+      "何とかしてくれ！",
+      "隣の村まで行かなきゃならねぇんだがよぉ",
+      "寄りにもよって道中にワームがいやがる！",
+      "あいつらを狩ってきてくれ！早急に！"
+    ],
+    "completedDescriptions": [
+      "おぉ！ありがとう",
+      "感謝する！こいつはお礼だ！",
+      "急いでるから！それじゃぁな！"
+    ],
+    "type": "MOB",
+    "targetId": "jagged_worm",
+    "requiredAmount": 12,
+    "rewardCol": 400,
+    "rewardExp": 300,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_Blacksmith_talan": {
+    "id": "quest_Blacksmith_talan",
+    "floor": 2,
+    "questName": "強い防具を求めて！",
+    "npcName": "§aある鍛冶師の師匠",
+    "descriptions": [
+      "おぉお前か。弟子が世話になったようだな",
+      "聞いたぞ。かなり腕がたつみてぇじゃねぇか",
+      "ちょいと頼みがあるんだけどよ？",
+      "迷宮区にいるトーラス族を狩ってきてくれ！",
+      "頼むぜ！"
+    ],
+    "completedDescriptions": [
+      "聞いた通りだな！",
+      "仕事が早いぜ！",
+      "確かここで買える防具の強化にはこいつだったよな？",
+      "ほらやるよ！頑張って行ってこい！"
+    ],
+    "type": "MOB",
+    "targetId": "lesser_taurus_striker",
+    "requiredAmount": 8,
+    "rewardCol": 220,
+    "rewardExp": 200,
+    "rewardItemId": "taurus_fragment",
+    "rewardItemAmount": 10
+  },
+  "quest_ox_hunter": {
+    "id": "quest_ox_hunter",
+    "floor": 2,
+    "questName": "あの牛野郎をどうにかしてくれ！",
+    "npcName": "§aウルバス自衛隊見習い",
+    "descriptions": [
+      "誰か助けてくれ！",
+      "おぉ君は冒険者か。",
+      "すまないがここ村周辺の牛を狩ってきてくれないか？",
+      "個体数が増えていく一方なんだ！頼む！"
+    ],
+    "completedDescriptions": [
+      "おぉありがとう！おかげで助かった！",
+      "見習いとして君と同じレベルになれるよう頑張るよ！",
+      "こんなものしかないが受け取ってくれ",
+      "ここらで買える武器だがお試しで使ってみてくれ"
+    ],
+    "type": "MOB",
+    "targetId": "trembling_ox",
+    "requiredAmount": 15,
+    "rewardCol": 0,
+    "rewardExp": 280,
+    "rewardItemId": "",
+    "rewardItemAmount": 1,
+    "rewardChoices": [
+      "rock_sword",
+      "rock_rapier",
+      "rock_dagger",
+      "rock_greatsword",
+      "rock_spear"
+    ]
+  },
+  "quest_amere_Strengthening_Olderbrother": {
+    "id": "quest_amere_Strengthening_Olderbrother",
+    "floor": 2,
+    "questName": "防具...強化したくないか？prat1",
+    "npcName": "§a防具専門の兄弟鍛冶師　兄",
+    "descriptions": [
+      "やぁやぁ君たち。防具の強化に興味ないか？",
+      "強化にはトーラス族の武器破片と",
+      "ウインドワスプの針が必要だ！",
+      "私の依頼はトーラス族の狩りだ！"
+    ],
+    "completedDescriptions": [
+      "ははは！これで今日から君たちも防具強化マスターだ！",
+      "簡単だろ？",
+      "弟の依頼も受けてくれな！"
+    ],
+    "type": "MOB",
+    "targetId": "lesser_taurus_striker",
+    "requiredAmount": 12,
+    "rewardCol": 280,
+    "rewardExp": 240,
+    "rewardItemId": "taurus_fragment",
+    "rewardItemAmount": 8
+  },
+  "quest_amere_Strengthening_Younger brother": {
+    "id": "quest_amere_Strengthening_Younger brother",
+    "floor": 2,
+    "questName": "防具...強化したくないか？prat2",
+    "npcName": "§a防具専門の兄弟鍛冶師　弟",
+    "descriptions": [
+      "やぁやぁ君たち。兄から話は聞いてるな？",
+      "僕が依頼するのはウインドワスプの討伐だ！",
+      "あいつはすばしっこい。",
+      "気を付けて狩ってきてくれ！"
+    ],
+    "completedDescriptions": [
+      "ははは！これで今日から君たちも防具強化マスターだ！",
+      "これで防具たちも喜んでる！"
+    ],
+    "type": "MOB",
+    "targetId": "wind_wasp",
+    "requiredAmount": 12,
+    "rewardCol": 280,
+    "rewardExp": 240,
+    "rewardItemId": "wind_wasp_stinger",
+    "rewardItemAmount": 8
+  },
+  "quest_food_Please": {
+    "id": "quest_food_Please",
+    "floor": 2,
+    "questName": "胃袋無限",
+    "npcName": "§a食いしん坊の村人",
+    "descriptions": [
+      "おぉ～そこの君～",
+      "オックスの～。ロ～ストビ～フ持ってないか～い？",
+      "お腹すいちゃって～。",
+      "持ってたら分けてほし～な～。買ったやつでも構わないよ～"
+    ],
+    "completedDescriptions": [
+      "うわ～。ありがと～う。",
+      "今手持ちに～。ボアのシチュ～あるんだけど～",
+      "飽きちゃって～あげるよ～。"
+    ],
+    "type": "ITEM",
+    "targetId": "roasted_ox",
+    "requiredAmount": 5,
+    "rewardCol": 240,
+    "rewardExp": 200,
+    "rewardItemId": "boar_stew",
+    "rewardItemAmount": 8
+  },
+  "quest_furniture": {
+    "id": "quest_furniture",
+    "floor": 2,
+    "questName": "殺風景な部屋",
+    "npcName": "§a引っ越してきた村人",
+    "descriptions": [
+      "急なんだがこの殺風景な部屋を見ろ",
+      "なにもねぇ。家具作るものはあるが",
+      "素材がねぇ。硬い岩素材あればある程度は作れるんだ。"
+    ],
+    "completedDescriptions": [
+      "おぉありがとな。",
+      "これでこの殺風景な部屋とはおさらばだ"
+    ],
+    "type": "ITEM",
+    "targetId": "hard_rock_material",
+    "requiredAmount": 10,
+    "rewardCol": 350,
+    "rewardExp": 300,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_wasp_Accessories": {
+    "id": "quest_wasp_Accessories",
+    "floor": 2,
+    "questName": "アクセ作りの第一歩",
+    "npcName": "§a怪しげな商人",
+    "descriptions": [
+      "なぁ、そこのあんた。ちょいとたのみがあるんだが",
+      "あるアクセサリーを作ろうと思っててね～",
+      "ウィンドワスプの針が欲しい。"
+    ],
+    "completedDescriptions": [
+      "いやはやすまぬな～",
+      "少ないけど。ほれやるよ"
+    ],
+    "type": "ITEM",
+    "targetId": "wind_wasp_stinger",
+    "requiredAmount": 10,
+    "rewardCol": 320,
+    "rewardExp": 300,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  },
+  "quest_wolf_elf": {
+    "id": "quest_wolf_elf",
+    "floor": 3,
+    "questName": "目障りなウルフをっ！",
+    "npcName": "§aオオカミ狩りの黒エルフ",
+    "descriptions": [
+      "最近ウルフどもが野営地を荒らしてくるんだ...",
+      "どうかやつらを懲らしめてくれ！",
+      "報酬には情報を共有する！"
+    ],
+    "completedDescriptions": [
+      "おお！たすかった！",
+      "あの塔の主だが...",
+      "避けられないぐらい速い攻撃は",
+      "地面に足をつけなければ大丈夫だぞ！"
+    ],
+    "type": "MOB",
+    "targetId": "roaring_wolf",
+    "requiredAmount": 50,
+    "rewardCol": 350,
+    "rewardExp": 350,
+    "rewardItemId": "",
+    "rewardItemAmount": 0
+  }
+}

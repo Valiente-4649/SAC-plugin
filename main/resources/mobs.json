@@ -1,0 +1,748 @@
+{
+  "frenzy_boar": {
+    "id": "frenzy_boar",
+    "name": "Frenzy Boar",
+    "category": "NORMAL",
+    "customModelData": 2,
+    "level": 1,
+    "maxHealth": 105,
+    "attackDamage": 50,
+    "movementSpeed": 0.23,
+    "followRange": 10,
+    "specialAttacks": [
+      {
+        "attackId": "charge",
+        "rangeLevel": 5,
+        "damageMultiplier": 1,
+        "chargeTicks": 30
+      }
+    ],
+    "exp": 20,
+    "expMax": 30,
+    "col": 20,
+    "colMax": 30,
+    "drops": [
+      {
+        "id": "boar_meat",
+        "chance": 0.2
+      },
+      {
+        "id": "boar_claws",
+        "chance": 0.2
+      },
+      {
+        "id": "boar_fang",
+        "chance": 0.1
+      }
+    ],
+    "raremob": {
+      "spry_shrooman": 0.0005
+    }
+  },
+  "little_nepenthes": {
+    "id": "little_nepenthes",
+    "name": "Little Nepenthes",
+    "category": "NORMAL",
+    "customModelData": 3,
+    "level": 3,
+    "maxHealth": 175,
+    "attackDamage": 80,
+    "movementSpeed": 0.26,
+    "followRange": 13,
+    "exp": 20,
+    "expMax": 30,
+    "col": 20,
+    "colMax": 30,
+    "drops": [
+      {
+        "id": "red_petals",
+        "chance": 0.3
+      }
+    ],
+    "raremob": {
+      "little_nepenthes2": 0.005,
+      "spry_shrooman": 0.0005
+    }
+  },
+  "little_nepenthes2": {
+    "id": "little_nepenthes2",
+    "name": "Little Nepenthes",
+    "category": "NORMAL",
+    "customModelData": 13,
+    "level": 3,
+    "maxHealth": 175,
+    "attackDamage": 80,
+    "movementSpeed": 0.26,
+    "followRange": 6,
+    "exp": 20,
+    "expMax": 30,
+    "col": 20,
+    "colMax": 30,
+    "drops": [
+      {
+        "id": "nepenthes_ovule",
+        "chance": 1
+      }
+    ]
+  },
+  "spry_shrooman": {
+    "id": "spry_shrooman",
+    "name": "Spry Shrooman",
+    "category": "NORMAL",
+    "customModelData": 4,
+    "level": 9,
+    "maxHealth": 238,
+    "attackDamage": 140,
+    "movementSpeed": 0.26,
+    "followRange": 5,
+    "exp": 0,
+    "expMax": 0,
+    "col": 0,
+    "colMax": 0,
+    "drops": [
+      {
+        "id": "wind_fleuret",
+        "chance": 1
+      }
+    ]
+  },
+  "kobold_henchman": {
+    "id": "kobold_henchman",
+    "name": "Kobold Henchman",
+    "category": "NORMAL",
+    "customModelData": 4,
+    "level": 5,
+    "maxHealth": 175,
+    "attackDamage": 100,
+    "movementSpeed": 0.26,
+    "followRange": 8,
+    "specialAttacks": [
+      {
+        "attackId": "cone_front",
+        "rangeLevel": 3,
+        "damageMultiplier": 2,
+        "chargeTicks": 30
+      }
+    ],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "axe_fragment",
+        "chance": 0.4
+      },
+      {
+        "id": "cows_milk",
+        "chance": 0.1
+      }
+    ],
+    "raremob": {
+      "spry_shrooman": 0.0005
+    }
+  },
+  "dire_wolf": {
+    "id": "dire_wolf",
+    "name": "Dire Wolf",
+    "category": "NORMAL",
+    "customModelData": 5,
+    "level": 7,
+    "maxHealth": 200,
+    "attackDamage": 120,
+    "movementSpeed": 0.28,
+    "followRange": 10,
+    "specialAttacks": [
+      {
+        "attackId": "charge",
+        "rangeLevel": 3,
+        "damageMultiplier": 1,
+        "chargeTicks": 30
+      }
+    ],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "dire_wolf_meat",
+        "chance": 0.2
+      },
+      {
+        "id": "dire_wolf_fang",
+        "chance": 0.2
+      },
+      {
+        "id": "dire_wolf_claws",
+        "chance": 0.1
+      }
+    ],
+    "raremob": {
+      "spry_shrooman": 0.0005
+    }
+  },
+  "ruin_kobold_trooper": {
+    "id": "ruin_kobold_trooper",
+    "name": "Ruin Kobold Trooper",
+    "category": "NORMAL",
+    "customModelData": 6,
+    "level": 9,
+    "maxHealth": 272,
+    "attackDamage": 140,
+    "movementSpeed": 0.28,
+    "followRange": 8,
+    "specialAttacks": [
+      {
+        "attackId": "cone_front",
+        "rangeLevel": 4,
+        "damageMultiplier": 2,
+        "chargeTicks": 30
+      }
+    ],
+    "exp": 22,
+    "expMax": 42,
+    "col": 22,
+    "colMax": 42,
+    "drops": [
+      {
+        "id": "axe_fragment",
+        "chance": 0.5
+      },
+      {
+        "id": "cows_milk",
+        "chance": 0.1
+      }
+    ]
+  },
+  "ruin_kobold_sentinel": {
+    "id": "ruin_kobold_sentinel",
+    "name": "Ruin Kobold Sentinel",
+    "category": "MINION",
+    "customModelData": 6,
+    "level": 9,
+    "maxHealth": 600,
+    "attackDamage": 175,
+    "movementSpeed": 0.29,
+    "followRange": 20,
+    "specialAttacks": [
+      {
+        "attackId": "cone_front",
+        "rangeLevel": 4,
+        "damageMultiplier": 2,
+        "chargeTicks": 30
+      },
+      {
+        "attackId": "charge",
+        "rangeLevel": 5,
+        "damageMultiplier": 1,
+        "chargeTicks": 20
+      }
+    ],
+    "exp": 46,
+    "expMax": 56,
+    "col": 46,
+    "colMax": 56,
+    "drops": [
+      {
+        "id": "axe_fragment",
+        "chance": 1
+      }
+    ]
+  },
+  "illfang_the_kobold_lord": {
+    "id": "illfang_the_kobold_lord",
+    "name": "Illfang the Kobold Lord",
+    "category": "FLOOR_BOSS",
+    "customModelData": 1,
+    "level": 9,
+    "maxHealth": 23000,
+    "attackDamage": 175,
+    "movementSpeed": 0.29,
+    "followRange": 30,
+    "specialAttacks": [
+      {
+        "attackId": "cone_front",
+        "rangeLevel": 8,
+        "damageMultiplier": 2.5,
+        "chargeTicks": 30
+      },
+      {
+        "attackId": "charge",
+        "rangeLevel": 10,
+        "damageMultiplier": 2,
+        "chargeTicks": 20
+      },
+      {
+        "attackId": "jump_slam",
+        "rangeLevel": 15,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 15
+      },
+      {
+        "attackId": "circle",
+        "rangeLevel": 18,
+        "damageMultiplier": 1.0,
+        "chargeTicks": 40
+      }
+    ],
+    "exp": 1700,
+    "expMax": 1710,
+    "col": 1700,
+    "colMax": 1710,
+    "drops": [
+      {
+        "id": "kobold_lord_fang",
+        "chance": 1
+      },
+      {
+        "id": "kobold_lord_fang",
+        "chance": 0.3
+      },
+      {
+        "id": "kobold_lord_fang",
+        "chance": 0.1
+      },
+      {
+        "id": "coat_of_midnight",
+        "chance": 0.05
+      }
+    ]
+  },
+  "trembling_ox": {
+    "id": "trembling_ox",
+    "name": "Trembling Ox",
+    "category": "NORMAL",
+    "customModelData": 7,
+    "level": 10,
+    "maxHealth": 245,
+    "attackDamage": 170,
+    "movementSpeed": 0.26,
+    "followRange": 10,
+    "specialAttacks": [
+      {
+        "attackId": "charge",
+        "rangeLevel": 6,
+        "damageMultiplier": 2,
+        "chargeTicks": 30
+      }
+    ],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "ox_beef",
+        "chance": 0.2
+      },
+      {
+        "id": "hard_rock_material",
+        "chance": 0.2
+      }
+    ]
+  },
+  "jagged_worm": {
+    "id": "jagged_worm",
+    "name": "Jagged Worm",
+    "category": "NORMAL",
+    "customModelData": 8,
+    "level": 10,
+    "maxHealth": 266,
+    "attackDamage": 213,
+    "movementSpeed": 0.3,
+    "followRange": 7,
+    "specialAttacks": [
+      {
+        "attackId": "circle",
+        "rangeLevel": 6,
+        "damageMultiplier": 1,
+        "chargeTicks": 25
+      }
+    ],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "jagged_fluids",
+        "chance": 0.4
+      }
+    ]
+  },
+  "wind_wasp": {
+    "id": "wind_wasp",
+    "name": "Wind Wasp",
+    "category": "NORMAL",
+    "customModelData": 9,
+    "level": 11,
+    "maxHealth": 266,
+    "attackDamage": 182,
+    "movementSpeed": 0.3,
+    "followRange": 7,
+    "specialAttacks": [
+      {
+        "attackId": "charge",
+        "rangeLevel": 2,
+        "damageMultiplier": 1,
+        "chargeTicks": 10
+      }
+    ],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "wind_wasp_stinger",
+        "chance": 0.3
+      }
+    ]
+  },
+  "lesser_taurus_striker": {
+    "id": "lesser_taurus_striker",
+    "name": "Lesser Taurus Striker",
+    "category": "NORMAL",
+    "customModelData": 10,
+    "level": 11,
+    "maxHealth": 328,
+    "attackDamage": 228,
+    "movementSpeed": 0.23,
+    "followRange": 8,
+    "specialAttacks": [
+      {
+        "attackId": "cone_front",
+        "rangeLevel": 5,
+        "damageMultiplier": 2,
+        "chargeTicks": 20,
+        "stunChance": 0.3,
+        "stunLevel": 1
+      }
+    ],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "taurus_fragment",
+        "chance": 0.5
+      }
+    ]
+  },
+  "nato_the_colonel_taurus": {
+    "id": "nato_the_colonel_taurus",
+    "name": "Nato the Colonel Taurus",
+    "category": "FLOOR_BOSS",
+    "customModelData": 11,
+    "level": 11,
+    "maxHealth": 4100,
+    "attackDamage": 228,
+    "movementSpeed": 0.27,
+    "followRange": 30,
+    "specialAttacks": [
+      {
+        "attackId": "circle",
+        "rangeLevel": 10,
+        "damageMultiplier": 2,
+        "chargeTicks": 30
+      },
+      {
+        "attackId": "jump",
+        "rangeLevel": 5,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 20
+      }
+    ],
+    "exp": 334,
+    "expMax": 344,
+    "col": 334,
+    "colMax": 344,
+    "drops": [
+      {
+        "id": "taurus_fragment",
+        "chance": 1
+      }
+    ]
+  },
+  "baran_the_general_taurus": {
+    "id": "baran_the_general_taurus",
+    "name": "Baran the General Taurus",
+    "category": "FLOOR_BOSS",
+    "customModelData": 12,
+    "level": 11,
+    "maxHealth": 4100,
+    "attackDamage": 228,
+    "movementSpeed": 0.28,
+    "followRange": 30,
+    "specialAttacks": [
+      {
+        "attackId": "circle",
+        "rangeLevel": 10,
+        "damageMultiplier": 2,
+        "chargeTicks": 30,
+        "stunChance": 0.3,
+        "stunLevel": 2
+      },
+      {
+        "attackId": "jump",
+        "rangeLevel": 5,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 20
+      },
+      {
+        "attackId": "jump_to_player",
+        "rangeLevel": 7,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 25
+      }
+    ],
+    "exp": 335,
+    "expMax": 345,
+    "col": 335,
+    "colMax": 345,
+    "drops": [
+      {
+        "id": "taurus_fragment",
+        "chance": 1
+      }
+    ]
+  },
+  "asterios_the_taurus_king": {
+    "id": "asterios_the_taurus_king",
+    "name": "Asterios the Taurus King",
+    "category": "FLOOR_BOSS",
+    "customModelData": 12,
+    "level": 11,
+    "maxHealth": 12300,
+    "attackDamage": 228,
+    "movementSpeed": 0.29,
+    "followRange": 30,
+    "specialAttacks": [
+      {
+        "attackId": "circle",
+        "rangeLevel": 13,
+        "damageMultiplier": 2,
+        "chargeTicks": 35,
+        "stunChance": 0.3,
+        "stunLevel": 2
+      },
+      {
+        "attackId": "jump",
+        "rangeLevel": 8,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 20
+      },
+      {
+        "attackId": "jump_to_player",
+        "rangeLevel": 10,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 25
+      },
+      {
+        "attackId": "bombard",
+        "rangeLevel": 3,
+        "damageMultiplier": 2.0,
+        "chargeTicks": 20
+      }
+    ],
+    "exp": 1020,
+    "expMax": 1030,
+    "col": 1020,
+    "colMax": 1030,
+    "drops": [
+      {
+        "id": "asterios_crown",
+        "chance": 1
+      },
+      {
+        "id": "asterios_crown",
+        "chance": 0.3
+      },
+      {
+        "id": "asterios_crown",
+        "chance": 0.1
+      },
+      {
+        "id": "asterios_helm",
+        "chance": 0.05
+      }
+    ]
+  },
+  "elder_treant": {
+    "id": "elder_treant",
+    "name": "Elder Treant",
+    "category": "NORMAL",
+    "customModelData": 14,
+    "level": 12,
+    "maxHealth": 315,
+    "attackDamage": 194,
+    "movementSpeed": 0.26,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "elder_treant_bough",
+        "chance": 0.4
+      }
+    ]
+  },
+  "thicket_spider": {
+    "id": "thicket_spider",
+    "name": "Thicket Spider",
+    "category": "NORMAL",
+    "customModelData": 19,
+    "level": 12,
+    "maxHealth": 357,
+    "attackDamage": 194,
+    "movementSpeed": 0.28,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 19,
+    "expMax": 29,
+    "col": 19,
+    "colMax": 29,
+    "drops": [
+      {
+        "id": "thicket_spider_venom_fang",
+        "chance": 0.4
+      }
+    ]
+  },
+  "roaring_wolf": {
+    "id": "roaring_wolf",
+    "name": "Roaring Wolf",
+    "category": "NORMAL",
+    "customModelData": 5,
+    "level": 12,
+    "maxHealth": 357,
+    "attackDamage": 194,
+    "movementSpeed": 0.28,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "roaring_wolf_claw",
+        "chance": 0.4
+      }
+    ]
+  },
+  "forest_elven_falconer": {
+    "id": "forest_elven_falconer",
+    "name": "Forest Elven Falconer",
+    "category": "NORMAL",
+    "customModelData": 17,
+    "level": 13,
+    "maxHealth": 480,
+    "attackDamage": 172,
+    "movementSpeed": 0.29,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "elven_dagger",
+        "chance": 0.01
+      }
+    ]
+  },
+  "dark_elven_wolf_handler": {
+    "id": "dark_elven_wolf_handler",
+    "name": "Dark Elven Wolf Handler",
+    "category": "NORMAL",
+    "customModelData": 15,
+    "level": 13,
+    "maxHealth": 480,
+    "attackDamage": 172,
+    "movementSpeed": 0.29,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "elven_dagger",
+        "chance": 0.01
+      }
+    ]
+  },
+  "fallen_elf_warrior": {
+    "id": "fallen_elf_warrior",
+    "name": "Fallen Elf Warrior",
+    "category": "NORMAL",
+    "customModelData": 18,
+    "level": 14,
+    "maxHealth": 504,
+    "attackDamage": 218,
+    "movementSpeed": 0.29,
+    "followRange": 8,
+    "specialAttacks": [],
+    "exp": 22,
+    "expMax": 32,
+    "col": 22,
+    "colMax": 32,
+    "drops": [
+      {
+        "id": "antidote_potion",
+        "chance": 0.2
+      }
+    ]
+  },
+  "nerius_the_evil_treant": {
+    "id": "nerius_the_evil_treant",
+    "name": "Nerius The Evil Treant",
+    "category": "FLOOR_BOSS",
+    "customModelData": 16,
+    "level": 14,
+    "maxHealth": 25200,
+    "attackDamage": 273,
+    "movementSpeed": 0.3,
+    "followRange": 30,
+    "specialAttacks": [
+      {
+        "attackId": "circle",
+        "rangeLevel": 15,
+        "damageMultiplier": 1,
+        "chargeTicks": 15
+      },
+      {
+        "attackId": "rectangle",
+        "rangeLevel": 30,
+        "damageMultiplier": 1.5,
+        "chargeTicks": 20
+      }
+    ],
+    "exp": 1350,
+    "expMax": 1360,
+    "col": 1350,
+    "colMax": 1360,
+    "drops": [
+      {
+        "id": "vibrant_branch",
+        "chance": 1
+      },
+      {
+        "id": "vibrant_branch",
+        "chance": 0.3
+      },
+      {
+        "id": "vibrant_branch",
+        "chance": 0.1
+      }
+    ]
+  }
+}

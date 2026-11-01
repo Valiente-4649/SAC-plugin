@@ -1,0 +1,22 @@
+{
+  "carrot_seed": {
+    "id": "carrot_seed",
+    "name": "<ニンジンの種>",
+    "category": "農業",
+    "description": "ニンジンが育つ種",
+    "price": 10,
+    "resultItemId": "carrot",
+    "rareResultItemId": "high_quality_carrot",
+    "fertilizerStage": 2
+  },
+  "maru_imo_seed": {
+    "id": "maru_imo_seed",
+    "name": "<マルイモの種>",
+    "category": "農業",
+    "description": "マルイモが育つ種",
+    "price": 10,
+    "resultItemId": "maru_imo",
+    "rareResultItemId": "high_maru_imo",
+    "fertilizerStage": 3
+  }
+}

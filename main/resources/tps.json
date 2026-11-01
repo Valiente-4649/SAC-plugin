@@ -1,0 +1,32 @@
+{
+  "1": {
+    "world": "world",
+    "x": 8.5,
+    "y": 87,
+    "z": 252.5,
+    "yaw": 180.0,
+    "pitch": 0.0,
+    "name": "始まりの街",
+    "bossId": null
+  },
+  "2": {
+    "world": "floor2",
+    "x": -165.5,
+    "y": 84,
+    "z": -427.5,
+    "yaw": -90.0,
+    "pitch": 0.0,
+    "name": "ウルバス",
+    "bossId": "illfang_the_kobold_lord"
+  },
+  "3": {
+    "world": "floor3",
+    "x": 338.5,
+    "y": 73,
+    "z": 210.5,
+    "yaw": 90.0,
+    "pitch": 0.0,
+    "name": "ズムフト",
+    "bossId": "asterios_the_taurus_king"
+  }
+}

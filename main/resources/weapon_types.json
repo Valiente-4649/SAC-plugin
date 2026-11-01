@@ -1,0 +1,82 @@
+[
+  {
+    "category": "片手剣",
+    "normalReach": 4,
+    "slotIndex": 0,
+    "description": "バランスの取れた汎用武器種。ソードスキルは単発〜多段まで幅広い。",
+    "maxSpeedBpm": 110,
+    "canParry": true,
+    "iconCustomModelData": 5
+  },
+  {
+    "category": "細剣",
+    "normalReach": 4,
+    "slotIndex": 1,
+    "description": "高速なコンボが特徴。連撃回数が増えるほど威力が増す。",
+    "maxSpeedBpm": 110,
+    "knockback": false,
+    "iconCustomModelData": 35
+  },
+  {
+    "category": "短剣",
+    "normalReach": 3,
+    "slotIndex": 2,
+    "description": "最も短いリーチ。AGI依存の高速5連撃を持ち、素早い一撃が強み。",
+    "maxSpeedBpm": 140,
+    "weightAffectsSpeed": false,
+    "strAffectsSpeed": false,
+    "knockback": false,
+    "iconCustomModelData": 65
+  },
+  {
+    "category": "両手剣",
+    "normalReach": 5,
+    "slotIndex": 3,
+    "description": "長めのリーチと重い一撃が特徴。スキルの範囲攻撃に優れる。",
+    "maxSpeedBpm": 80,
+    "canParry": true,
+    "iconCustomModelData": 95
+  },
+  {
+    "category": "刀",
+    "normalReach": 4,
+    "slotIndex": 4,
+    "description": "抜刀カウンターを持つ反撃特化の武器種。カウンター時は高倍率で即発動。",
+    "maxSpeedBpm": 110,
+    "knockback": false,
+    "iconCustomModelData": 121
+  },
+  {
+    "category": "槍",
+    "normalReach": 7,
+    "slotIndex": 5,
+    "description": "最長のリーチを誇る武器種。特殊能力・ノックバック・パリィは一切なく、間合いの管理そのものが強み。",
+    "maxSpeedBpm": 110,
+    "knockback": false,
+    "iconCustomModelData": 155
+  },
+  {
+    "category": "曲刀",
+    "normalReach": 4,
+    "slotIndex": 6,
+    "description": "耐久値が低い代わりに、火力が高く軽いのが特徴。",
+    "maxSpeedBpm": 110,
+    "knockback": false,
+    "iconCustomModelData": 185
+  },
+  {
+    "category": "体術",
+    "normalReach": 3,
+    "slotIndex": 7,
+    "description": "武器を持たず、拳と脚のみで戦う武術。移動速度+5%の恩恵を受けるが、武器は一切使用できない。",
+    "maxSpeedBpm": 160,
+    "canParry": false,
+    "knockback": false,
+    "unarmed": true,
+    "unarmedBaseDamage": 5,
+    "unarmedDamagePerLevel": 1,
+    "movementSpeedBonusPercent": 5,
+    "requiresUnlock": true,
+    "iconCustomModelData": 0
+  }
+]

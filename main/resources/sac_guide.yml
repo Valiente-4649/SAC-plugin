@@ -1,0 +1,22 @@
+# SAC Guide - Login objective recommendations
+# 推奨レベルはmobs.jsonの各階層ボスLvを基準に設定
+# 推奨武器攻撃力はweapons.jsonの武器性能から作成した暫定値
+# 実際の攻略難度に合わせて調整してください
+
+enabled: true
+
+floors:
+  # 第1層 - Illfang the Kobold Lord (Boss Lv9)
+  1:
+    recommended-level: 9
+    recommended-weapon-attack: 40.0
+
+  # 第2層 - Asterios the Taurus King (Boss Lv11)
+  2:
+    recommended-level: 11
+    recommended-weapon-attack: 50.0
+
+  # 第3層 - Nerius the Evil Treant (Boss Lv14)
+  3:
+    recommended-level: 14
+    recommended-weapon-attack: 60.0

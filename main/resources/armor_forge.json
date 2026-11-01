@@ -1,0 +1,67 @@
+[
+  {
+    "recipeId": "steel_helmet_recipe",
+    "resultArmorId": "steel_helmet",
+    "requiredProficiency": 2,
+    "cost": 1100,
+    "mainMaterialId": "taurus_fragment",
+    "mainMaterialAmount": 9,
+    "subMaterials": {
+      "jagged_fluids": 5
+    },
+    "maxUpgrades": 3,
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_chestplate_recipe",
+    "resultArmorId": "steel_chestplate",
+    "requiredProficiency": 5,
+    "cost": 1550,
+    "mainMaterialId": "taurus_fragment",
+    "mainMaterialAmount": 12,
+    "subMaterials": {
+      "jagged_fluids": 8
+    },
+    "maxUpgrades": 3,
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_arm_recipe",
+    "resultArmorId": "steel_arm",
+    "requiredProficiency": 3,
+    "cost": 1250,
+    "mainMaterialId": "taurus_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "jagged_fluids": 6
+    },
+    "maxUpgrades": 3,
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_leggings_recipe",
+    "resultArmorId": "steel_leggings",
+    "requiredProficiency": 4,
+    "cost": 1400,
+    "mainMaterialId": "taurus_fragment",
+    "mainMaterialAmount": 11,
+    "subMaterials": {
+      "jagged_fluids": 7
+    },
+    "maxUpgrades": 3,
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_boots_recipe",
+    "resultArmorId": "steel_boots",
+    "requiredProficiency": 1,
+    "cost": 950,
+    "mainMaterialId": "taurus_fragment",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "jagged_fluids": 4
+    },
+    "maxUpgrades": 3,
+    "baseHitCount": 7
+  }
+]

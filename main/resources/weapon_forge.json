@@ -1,0 +1,442 @@
+[
+  {
+    "recipeId": "small_sword_recipe",
+    "resultWeaponId": "small_sword",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "small_rapier_recipe",
+    "resultWeaponId": "small_rapier",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "small_dagger_recipe",
+    "resultWeaponId": "small_dagger",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "small_greatsword_recipe",
+    "resultWeaponId": "small_greatsword",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "small_spear_recipe",
+    "resultWeaponId": "small_spear",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "small_scimitar_recipe",
+    "resultWeaponId": "small_scimitar",
+    "requiredProficiency": 1,
+    "cost": 340,
+    "mainMaterialId": "boar_claws",
+    "mainMaterialAmount": 5,
+    "subMaterials": {},
+    "baseHitCount": 5
+  },
+  {
+    "recipeId": "bronze_sword_recipe",
+    "resultWeaponId": "bronze_sword",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "bronze_rapier_recipe",
+    "resultWeaponId": "bronze_rapier",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "bronze_dagger_recipe",
+    "resultWeaponId": "bronze_dagger",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "bronze_greatsword_recipe",
+    "resultWeaponId": "bronze_greatsword",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "bronze_spear_recipe",
+    "resultWeaponId": "bronze_spear",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "bronze_scimitar_recipe",
+    "resultWeaponId": "bronze_scimitar",
+    "requiredProficiency": 3,
+    "cost": 340,
+    "mainMaterialId": "boar_fang",
+    "mainMaterialAmount": 8,
+    "subMaterials": {
+      "boar_claws": 3
+    },
+    "baseHitCount": 6
+  },
+  {
+    "recipeId": "steel_blade_recipe",
+    "resultWeaponId": "steel_blade",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_rapier_recipe",
+    "resultWeaponId": "steel_rapier",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_dagger_recipe",
+    "resultWeaponId": "steel_dagger",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_greatblade_recipe",
+    "resultWeaponId": "steel_greatblade",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_spear_recipe",
+    "resultWeaponId": "steel_spear",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "steel_scimitar_recipe",
+    "resultWeaponId": "steel_scimitar",
+    "requiredProficiency": 6,
+    "cost": 350,
+    "mainMaterialId": "axe_fragment",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "dire_wolf_fang": 7
+    },
+    "baseHitCount": 7
+  },
+  {
+    "recipeId": "anneal_blade_recipe",
+    "resultWeaponId": "anneal_blade",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "anneal_rapier_recipe",
+    "resultWeaponId": "anneal_rapier",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "anneal_dagger_recipe",
+    "resultWeaponId": "anneal_dagger",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "anneal_greatblade_recipe",
+    "resultWeaponId": "anneal_greatblade",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "anneal_spear_recipe",
+    "resultWeaponId": "anneal_spear",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "anneal_scimitar_recipe",
+    "resultWeaponId": "anneal_scimitar",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "dire_wolf_claws",
+    "mainMaterialAmount": 15,
+    "subMaterials": {
+      "dire_wolf_fang": 25
+    },
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "wind_fleuret_recipe",
+    "resultWeaponId": "wind_fleuret",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "wind_wasp_stinger",
+    "mainMaterialAmount": 15,
+    "subMaterials": {},
+    "baseHitCount": 10
+  },
+  {
+    "recipeId": "rock_sword_recipe",
+    "resultWeaponId": "rock_sword",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "rock_rapier_recipe",
+    "resultWeaponId": "rock_rapier",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "rock_dagger_recipe",
+    "resultWeaponId": "rock_dagger",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "rock_greatblade_recipe",
+    "resultWeaponId": "rock_greatsword",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "rock_spear_recipe",
+    "resultWeaponId": "rock_spear",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "rock_scimitar_recipe",
+    "resultWeaponId": "rock_scimitar",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "banjaku_to_recipe",
+    "resultWeaponId": "banjaku_to",
+    "requiredProficiency": 9,
+    "cost": 350,
+    "mainMaterialId": "hard_rock_material",
+    "mainMaterialAmount": 12,
+    "subMaterials": {},
+    "baseHitCount": 8
+  },
+  {
+    "recipeId": "verdant_blade_recipe",
+    "resultWeaponId": "verdant_blade",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "verdant_rapier_recipe",
+    "resultWeaponId": "verdant_rapier",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "verdant_dagger_recipe",
+    "resultWeaponId": "verdant_dagger",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "verdant_greatblade_recipe",
+    "resultWeaponId": "verdant_greatblade",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "verdant_spear_recipe",
+    "resultWeaponId": "verdant_spear",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "verdant_scimitar_recipe",
+    "resultWeaponId": "verdant_scimitar",
+    "requiredProficiency": 12,
+    "cost": 350,
+    "mainMaterialId": "roaring_wolf_claw",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "elder_treant_bough": 20
+    },
+    "baseHitCount": 9
+  },
+  {
+    "recipeId": "elven_dagger_recipe",
+    "resultWeaponId": "elven_dagger",
+    "requiredProficiency": 9999,
+    "cost": 350,
+    "mainMaterialId": "thicket_spider_venom_fang",
+    "mainMaterialAmount": 10,
+    "subMaterials": {
+      "roaring_wolf_claw": 15
+    },
+    "baseHitCount": 10
+  }
+]

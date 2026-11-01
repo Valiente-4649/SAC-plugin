@@ -1,0 +1,52 @@
+{
+  "illfang_the_kobold_lord": {
+    "bossId": "illfang_the_kobold_lord",
+    "world": "world",
+    "pos1X": -115.0, "pos1Y": 153.0, "pos1Z": -934.0,
+    "pos2X": -167.0, "pos2Y": 132.0, "pos2Z": -870.0,
+    "tpInX": -140.5, "tpInY": 133.0, "tpInZ": -924.5, "tpInYaw": 0.0, "tpInPitch": 0.0,
+    "tpOutX": 8.5, "tpOutY": 87.0, "tpOutZ": 252.5, "tpOutYaw": 180.0, "tpOutPitch": 0.03,
+    "minionId": "ruin_kobold_sentinel",
+    "maxMinions": 4
+  },
+  "nato_the_colonel_taurus": {
+    "bossId": "nato_the_colonel_taurus",
+    "world": "floor2",
+    "pos1X": 195, "pos1Y": 171, "pos1Z": 459,
+    "pos2X": 129, "pos2Y": 147, "pos2Z": 525,
+    "tpInX": 191.5, "tpInY": 148, "tpInZ": 492.5, "tpInYaw": 0, "tpInPitch": 0,
+    "tpOutX": -165.5, "tpOutY": 84, "tpOutZ": -427.5, "tpOutYaw": 90, "tpOutPitch": 0,
+    "minionId": null,
+    "maxMinions": 0
+  },
+  "baran_the_general_taurus": {
+    "bossId": "baran_the_general_taurus",
+    "world": "floor2",
+    "pos1X": 195, "pos1Y": 171, "pos1Z": 459,
+    "pos2X": 129, "pos2Y": 147, "pos2Z": 525,
+    "tpInX": 191.5, "tpInY": 148, "tpInZ": 492.5, "tpInYaw": 0, "tpInPitch": 0,
+    "tpOutX": -165.5, "tpOutY": 84, "tpOutZ": -427.5, "tpOutYaw": 90, "tpOutPitch": 0,
+    "minionId": null,
+    "maxMinions": 0
+  },
+  "asterios_the_taurus_king": {
+    "bossId": "asterios_the_taurus_king",
+    "world": "floor2",
+    "pos1X": 195, "pos1Y": 171, "pos1Z": 459,
+    "pos2X": 129, "pos2Y": 147, "pos2Z": 525,
+    "tpInX": 191.5, "tpInY": 148, "tpInZ": 492.5, "tpInYaw": 0, "tpInPitch": 0,
+    "tpOutX": -165.5, "tpOutY": 84, "tpOutZ": -427.5, "tpOutYaw": 90, "tpOutPitch": 0,
+    "minionId": null,
+    "maxMinions": 0
+  },
+  "nerius_the_evil_treant": {
+    "bossId": "nerius_the_evil_treant",
+    "world": "floor3",
+    "pos1X": 14, "pos1Y": 50, "pos1Z": -343,
+    "pos2X": -52, "pos2Y": 26, "pos2Z": -277,
+    "tpInX": 9.5, "tpInY": 26, "tpInZ": -309.5, "tpInYaw": 0, "tpInPitch": 0,
+    "tpOutX": 338.5, "tpOutY": 73, "tpOutZ":  210.5, "tpOutYaw": 90, "tpOutPitch": 0,
+    "minionId": null,
+    "maxMinions": 0
+  }
+}

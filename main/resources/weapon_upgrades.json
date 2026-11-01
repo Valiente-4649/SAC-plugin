@@ -1,0 +1,158 @@
+[
+  {
+    "weaponId": "small_sword",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_sword",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_blade",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_blade",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_sword",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "small_rapier",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_rapier",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_rapier",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_rapier",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_rapier",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "wind_fleuret",
+    "maxUpgrades": 6
+  },
+  {
+    "weaponId": "small_dagger",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_dagger",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_dagger",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_dagger",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_dagger",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "small_greatsword",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_greatsword",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_greatblade",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_greatblade",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_greatsword",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "banjaku_to",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "small_spear",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_spear",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_spear",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_spear",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_spear",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "small_scimitar",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "bronze_scimitar",
+    "maxUpgrades": 1
+  },
+  {
+    "weaponId": "steel_scimitar",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "anneal_scimitar",
+    "maxUpgrades": 8
+  },
+  {
+    "weaponId": "rock_scimitar",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_blade",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_rapier",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_dagger",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_greatblade",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_spear",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "verdant_scimitar",
+    "maxUpgrades": 2
+  },
+  {
+    "weaponId": "elven_dagger",
+    "maxUpgrades": 9
+  }
+]
