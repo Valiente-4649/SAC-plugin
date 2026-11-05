@@ -13,7 +13,9 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -30,6 +32,7 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
     private final Set<UUID> moddedPlayers = new HashSet<>();
     private final Map<UUID, Invitation> invitations = new HashMap<>();
     private final Map<UUID, Transfer> transfers = new HashMap<>();
+    private final Map<UUID, MapPin> pins = new HashMap<>();
 
     public MapShareChannel(SACplugin plugin) {
         this.plugin = plugin;
@@ -54,6 +57,8 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
                     case 3 -> decideInvitation(player, in);
                     case 4 -> startTransfer(player, in);
                     case 5 -> receiveChunk(player, in);
+                    case 6 -> updatePin(player, in);
+                    case 7 -> sendPartyPins(player);
                     default -> { }
                 }
             }
@@ -66,6 +71,47 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
     private void updateModMarker(Player player) {
         if (!player.isOnline() || !moddedPlayers.contains(player.getUniqueId())) return;
         player.setPlayerListName("§b◆ §r" + player.getName());
+    }
+    private void updatePin(Player player, DataInputStream in) throws Exception {
+        String dimension = in.readUTF();
+        int x = in.readInt();
+        int z = in.readInt();
+        int color = in.readInt() & 0xFFFFFF;
+        UUID playerId = player.getUniqueId();
+        if (!moddedPlayers.contains(playerId) || dimension.isBlank() || dimension.length() > 256) return;
+        pins.put(playerId, new MapPin(playerId, player.getName(), dimension, x, z, color));
+        sendPartyPins(player);
+    }
+
+    private void sendPartyPins(Player requester) throws Exception {
+        Set<UUID> partyIds = new HashSet<>();
+        partyIds.add(requester.getUniqueId());
+        List<UUID> memberIds = plugin.getPartyManager().getPartyMembers(requester);
+        if (memberIds != null) partyIds.addAll(memberIds);
+        List<MapPin> visiblePins = new ArrayList<>();
+        for (UUID memberId : partyIds) {
+            if (!moddedPlayers.contains(memberId)) continue;
+            Player member = Bukkit.getPlayer(memberId);
+            MapPin pin = pins.get(memberId);
+            if (member != null && member.isOnline() && pin != null) visiblePins.add(pin);
+        }
+        byte[] packet = frame(out -> {
+            out.writeByte(26);
+            out.writeInt(visiblePins.size());
+            for (MapPin pin : visiblePins) {
+                writeUuid(out, pin.playerId);
+                out.writeUTF(pin.playerName);
+                out.writeUTF(pin.dimension);
+                out.writeInt(pin.x);
+                out.writeInt(pin.z);
+                out.writeInt(pin.color);
+            }
+        });
+        for (UUID memberId : partyIds) {
+            if (!moddedPlayers.contains(memberId)) continue;
+            Player member = Bukkit.getPlayer(memberId);
+            if (member != null && member.isOnline()) send(member, packet);
+        }
     }
     private void sendNearbyPlayers(Player requester) throws Exception {
         Set<Player> nearby = new HashSet<>();
@@ -244,12 +290,15 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
     public void onQuit(PlayerQuitEvent event) {
         UUID id = event.getPlayer().getUniqueId();
         moddedPlayers.remove(id);
+        pins.remove(id);
         event.getPlayer().setPlayerListName(event.getPlayer().getName());
         invitations.entrySet().removeIf(entry -> entry.getValue().senderId.equals(id)
                 || entry.getValue().targetId.equals(id));
         transfers.entrySet().removeIf(entry -> entry.getValue().invitation.senderId.equals(id)
                 || entry.getValue().invitation.targetId.equals(id));
     }
+
+    private record MapPin(UUID playerId, String playerName, String dimension, int x, int z, int color) { }
 
     private static byte[] frame(Writer writer) {
         try {
