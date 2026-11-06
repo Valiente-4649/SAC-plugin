@@ -38,13 +38,13 @@ public final class PlayerDataChannel implements PluginMessageListener {
             if (readVarInt(input) != PROTOCOL) return;
             PlayerData data = plugin.getPlayerManager().getStats(player);
             if (data == null) return;
-            player.sendPluginMessage(plugin, CHANNEL, encode(data));
+            player.sendPluginMessage(plugin, CHANNEL, encode(data, player));
         } catch (Exception exception) {
             plugin.getLogger().warning("SAC Mod向けデータ要求を処理できませんでした: " + exception.getMessage());
         }
     }
 
-    private byte[] encode(PlayerData data) throws Exception {
+    private byte[] encode(PlayerData data, Player player) throws Exception {
         JsonObject root = new JsonObject();
         root.addProperty("protocol", PROTOCOL);
         JsonObject questJson = new JsonObject();
