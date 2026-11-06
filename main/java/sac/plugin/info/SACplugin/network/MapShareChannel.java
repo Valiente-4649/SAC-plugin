@@ -59,6 +59,7 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
                     case 5 -> receiveChunk(player, in);
                     case 6 -> updatePin(player, in);
                     case 7 -> sendPartyPins(player);
+                    case 8 -> removePin(player);
                     default -> { }
                 }
             }
@@ -83,6 +84,11 @@ public final class MapShareChannel implements PluginMessageListener, Listener {
         sendPartyPins(player);
     }
 
+    private void removePin(Player player) throws Exception {
+        if (!moddedPlayers.contains(player.getUniqueId())) return;
+        pins.remove(player.getUniqueId());
+        sendPartyPins(player);
+    }
     private void sendPartyPins(Player requester) throws Exception {
         Set<UUID> partyIds = new HashSet<>();
         partyIds.add(requester.getUniqueId());
