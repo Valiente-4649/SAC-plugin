@@ -116,6 +116,10 @@ public class SACplugin extends JavaPlugin {
     private SurvivalManager survivalManager;
     private SafeZoneManager safeZoneManager;
     private NormalAttackManager normalAttackManager;
+    // ★追加: 実績システム
+    private sac.plugin.info.SACplugin.achievement.AchievementManager achievementManager;
+    private sac.plugin.info.SACplugin.achievement.AchievementMenu achievementMenu;
+    private sac.plugin.info.SACplugin.menu.MenuListener menuListener;
     // ==========================================
     // ★追加: /sacreload から一括で再読み込みできるようにするための登録リスト。
     // これから新しいマネージャーを増やす時は、implements Reloadable してここに登録するだけでよい。
@@ -303,7 +307,8 @@ public class SACplugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(this.upgradeMenuListener, this);
         getServer().getPluginManager().registerEvents(new RepairMenuListener(this),this);
         getServer().getPluginManager().registerEvents(new CookingListener(this), this);
-        getServer().getPluginManager().registerEvents(new MenuListener(this), this);
+        this.menuListener = new MenuListener(this);
+        getServer().getPluginManager().registerEvents(this.menuListener, this);
         getServer().getPluginManager().registerEvents(this.partyMenuListener, this);
         getServer().getPluginManager().registerEvents(new PartyChatListener(this), this);
         getServer().getPluginManager().registerEvents(new CrystalListener(this), this);
@@ -324,6 +329,19 @@ public class SACplugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new TreasureListener(this), this);
         getServer().getPluginManager().registerEvents(new WeaponReachListener(this), this);
         getServer().getPluginManager().registerEvents(new NormalAttackListener(this), this);
+
+        // ==========================================
+        // ★追加: 実績システム(全マネージャー生成後に作る。/sacreloadにも対応)
+        // ==========================================
+        this.achievementManager = new sac.plugin.info.SACplugin.achievement.AchievementManager(this);
+        this.achievementMenu = new sac.plugin.info.SACplugin.achievement.AchievementMenu(this, this.achievementManager);
+        reloadables.add(this.achievementManager);
+        getServer().getPluginManager().registerEvents(this.achievementManager, this);
+        getServer().getPluginManager().registerEvents(this.achievementMenu, this);
+        this.achievementManager.start();
+        if (getCommand("achievement") != null) {
+            getCommand("achievement").setExecutor(new sac.plugin.info.SACplugin.achievement.AchievementCommand(this));
+        }
 
         // ★起動時にプレイヤーショップのワールド同期を実行
         // ワールドエンティティが完全にロードされるまで少し待つ
@@ -393,6 +411,9 @@ public class SACplugin extends JavaPlugin {
     public SurvivalManager getSurvivalManager() { return survivalManager; }
     public SafeZoneManager getSafeZoneManager() { return safeZoneManager; }
     public SAOMobListener getSaoMobListener() { return saoMobListener; }
+    public sac.plugin.info.SACplugin.achievement.AchievementManager getAchievementManager() { return achievementManager; }
+    public sac.plugin.info.SACplugin.achievement.AchievementMenu getAchievementMenu() { return achievementMenu; }
+    public sac.plugin.info.SACplugin.menu.MenuListener getMenuListener() { return menuListener; }
 
     public boolean isSpawnerEnabled() { return spawnerEnabled; }
     public void setSpawnerEnabled(boolean enabled) { this.spawnerEnabled = enabled; }
@@ -406,6 +427,11 @@ public class SACplugin extends JavaPlugin {
         // サーバーにいる全プレイヤーをループ処理でキックする
         for (org.bukkit.entity.Player player : org.bukkit.Bukkit.getOnlinePlayers()) {
             player.kickPlayer("§cサーバーが再起動またはリロードされています。\n§f少し待ってから再接続してください。");
+        }
+
+        // ★追加: 実績の進捗を保存する
+        if (this.achievementManager != null) {
+            this.achievementManager.shutdown();
         }
 
         // ★追加: レイドの登録状況・ダメージ記録を再起動をまたいでも復元できるよう保存する

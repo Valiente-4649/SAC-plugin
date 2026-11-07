@@ -463,6 +463,8 @@ public class ArmorForgeManager implements Reloadable {
         setPendingPoints(result, points);
 
         player.sendMessage("§b[System] §r§a鍛造§b【" + tierName + "】§a！ §e" + baseArmor.name + " §aの生成に成功しました！");
+        // ★追加(実績): 奇跡的成功を記録する
+        if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onForge(player, tierName, "a:" + recipe.resultArmorId);
         player.sendMessage("§b[System] §r§d初期強化ポイントを" + points + "回分獲得しました。続けてDEF/DUR/WGT/STR/AGIに割り振ってください。");
         player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 1.0f, 1.0f);
 

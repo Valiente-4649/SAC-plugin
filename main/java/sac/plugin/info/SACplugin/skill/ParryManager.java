@@ -30,10 +30,12 @@ public class ParryManager implements Listener {
     private static final long PARRY_WINDOW_TICKS = 3L;
     private static final long PARRY_COOLDOWN_MS = 5000L;
     // ==========================================
-    // ★ジャストパリィ: パリィ受付の開始から、モブの攻撃判定までの時間がこれ以内ならジャスト(0.1秒)。
+    // ★ジャストパリィ: パリィ受付の開始から、モブの攻撃判定までの時間がこれ以内ならジャスト。
+    // 見た目(爆発)→判定は1tick=50msなので、60ms=「見た目が出てから押した」場合だけジャストになる。
+    // (通常パリィの受付は3tick=150msあるので、100msだと受付のほぼ全域がジャストになってしまっていた)
     // モブ特殊攻撃は「見た目」が判定の1tick(0.05秒)前に出るので、見た目を基準に前後0.05秒ずつが判定窓になる。
     // ==========================================
-    public static final long JUST_PARRY_WINDOW_MS = 100L;
+    public static final long JUST_PARRY_WINDOW_MS = 60L;
     // パリィ受付が「開始」した時刻(nanoTime)。連打で更新されない(受付開始の1回目だけを記録)。
     private final Map<UUID, Long> parryWindowStartNanos = new HashMap<>();
     // ==========================================

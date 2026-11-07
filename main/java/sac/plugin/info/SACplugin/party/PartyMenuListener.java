@@ -95,6 +95,8 @@ public class PartyMenuListener implements Listener {
         inv.setItem(4, friendBtn);
 
         inv.setItem(6, createButton(Material.SHIELD, "§6ギルド招待 (未実装)"));
+        // ★追加: 相手の実績を確認するボタン
+        inv.setItem(0, createButton(Material.ENCHANTED_BOOK, "§6実績確認", "§7相手の獲得した実績を確認します"));
         fillBackground(inv);
 
         // ★追加: 周囲のプレイヤー検索から開いた時のみ、右端(スロット8)にCol取引ボタンを配置
@@ -176,6 +178,8 @@ public class PartyMenuListener implements Listener {
         }
 
         inv.setItem(6, createButton(Material.BARRIER, "§cフレンド削除", "§7クリックでフレンドリストから削除します"));
+        // ★追加: フレンドの実績を確認するボタン(オフラインでも保存データから閲覧できる)
+        inv.setItem(0, createButton(Material.ENCHANTED_BOOK, "§6実績確認", "§7フレンドの獲得した実績を確認します"));
         fillBackground(inv);
         player.openInventory(inv);
     }
@@ -247,7 +251,10 @@ public class PartyMenuListener implements Listener {
                 return;
             }
 
-            if (itemName.equals("§aパーティー招待")) {
+            if (itemName.equals("§6実績確認")) {
+                player.closeInventory();
+                plugin.getAchievementMenu().openOther(player, target.getUniqueId(), target.getName());
+            } else if (itemName.equals("§aパーティー招待")) {
                 player.closeInventory();
                 plugin.getPartyManager().sendInvite(player, target);
             } else if (itemName.equals("§bフレンド申請")) {
@@ -271,7 +278,11 @@ public class PartyMenuListener implements Listener {
         else if (title.startsWith("§b《Friend Action》")) {
             String targetName = title.replace("§b《Friend Action》 §8", "");
 
-            if (itemName.equals("§aパーティー招待")) {
+            if (itemName.equals("§6実績確認")) {
+                player.closeInventory();
+                OfflinePlayer achTarget = Bukkit.getOfflinePlayer(targetName);
+                plugin.getAchievementMenu().openOther(player, achTarget.getUniqueId(), targetName);
+            } else if (itemName.equals("§aパーティー招待")) {
                 Player target = Bukkit.getPlayer(targetName);
                 if (target != null) {
                     player.closeInventory();

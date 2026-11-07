@@ -737,6 +737,8 @@ public class ForgeManager implements Reloadable {
         markLegacyQualityMigrated(result);
 
         player.sendMessage("§b[System] §r§a鍛造§b【" + tierName + "】§a！ §e" + baseWeapon.name + " §aの生成に成功しました！");
+        // ★追加(実績): 奇跡的成功を記録する
+        if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onForge(player, tierName, "w:" + recipe.resultWeaponId);
         player.sendMessage("§b[System] §r§d初期強化ポイントを" + points + "回分獲得しました。続けてSTR/DUR/DEX/ACC/WGTに割り振ってください。");
         player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 1.0f, 1.0f);
 

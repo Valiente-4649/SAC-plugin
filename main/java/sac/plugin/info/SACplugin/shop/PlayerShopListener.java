@@ -242,6 +242,9 @@ public class PlayerShopListener implements Listener {
                         plugin.getPlayerShopManager().saveShops(); // 在庫削除を確実に保存
                     }
 
+                    // ★追加(実績): 店主の売上(商業スキルの累計売上)を記録する。店主がオフラインでも記録される。
+                    if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onShopSale(shop.ownerUuid, data.shopItem.price);
+
                     player.sendMessage("§a[System] 商品を購入しました！ (-" + data.shopItem.price + " Col)");
                     player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1f, 1.5f);
                     player.closeInventory();

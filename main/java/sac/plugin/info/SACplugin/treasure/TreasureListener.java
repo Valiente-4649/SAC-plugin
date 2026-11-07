@@ -106,6 +106,8 @@ public class TreasureListener implements Listener {
 
         // ★ 開封済みとして記録
         plugin.getTreasureManager().markOpened(treasureId, player.getUniqueId());
+        // ★追加(実績): 宝箱の開封を記録する(宝箱側の履歴がリセットされても実績の進捗は残る)
+        if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onTreasureOpened(player, treasureId);
 
         // ★ メッセージ表示
         StringBuilder msg = new StringBuilder();
