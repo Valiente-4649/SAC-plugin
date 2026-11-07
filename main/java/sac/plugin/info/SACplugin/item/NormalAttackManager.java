@@ -60,10 +60,13 @@ public class NormalAttackManager {
         /** 最後の攻撃からこのtick数が空くと1段目に戻る */
         public final int comboResetTicks;
         public final List<Stage> stages;
+        /** これより短い間隔では通常攻撃できない(ms)。maxSpeedBpm から 60000/BPM で算出。0なら制限なし */
+        public final long minIntervalMs;
 
-        Config(int comboResetTicks, List<Stage> stages) {
+        Config(int comboResetTicks, List<Stage> stages, long minIntervalMs) {
             this.comboResetTicks = comboResetTicks;
             this.stages = Collections.unmodifiableList(stages);
+            this.minIntervalMs = minIntervalMs;
         }
     }
 
@@ -119,7 +122,8 @@ public class NormalAttackManager {
                 if (!obj.has("category") || !obj.has("normalAttack") || !obj.get("normalAttack").isJsonObject()) continue;
 
                 String category = obj.get("category").getAsString();
-                Config config = parseConfig(category, obj.getAsJsonObject("normalAttack"));
+                double bpm = num(obj, "maxSpeedBpm", 0.0);
+                Config config = parseConfig(category, obj.getAsJsonObject("normalAttack"), bpm);
                 if (config != null) configs.put(category, config);
             }
         } catch (Exception ex) {
@@ -147,7 +151,7 @@ public class NormalAttackManager {
         }
     }
 
-    private Config parseConfig(String category, JsonObject na) {
+    private Config parseConfig(String category, JsonObject na, double maxSpeedBpm) {
         if (!na.has("stages") || !na.get("stages").isJsonArray()) {
             plugin.getLogger().warning("[NormalAttack] " + category + ": stages がありません");
             return null;
@@ -183,7 +187,11 @@ public class NormalAttackManager {
             return null;
         }
         int resetTicks = (int) Math.max(1, num(na, "comboResetTicks", 30));
-        return new Config(resetTicks, stages);
+        // 最短間隔: normalAttack.minIntervalTicks があればそれ、なければ maxSpeedBpm（1分あたりの最大攻撃回数）から算出
+        long minIntervalMs = na.has("minIntervalTicks")
+                ? (long) (num(na, "minIntervalTicks", 0.0) * 50L)
+                : (maxSpeedBpm > 0 ? (long) (60000.0 / maxSpeedBpm) : 0L);
+        return new Config(resetTicks, stages, Math.max(0L, minIntervalMs));
     }
 
     private static String str(JsonObject o, String key, String def) {
