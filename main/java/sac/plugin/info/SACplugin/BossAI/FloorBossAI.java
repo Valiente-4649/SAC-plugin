@@ -130,7 +130,7 @@ public abstract class FloorBossAI {
                 if (ticks >= chargeTicks) {
                     cancel();
                     // ダメージ適用
-                    applyCircleDamage(center, radius, damageMultiplier, skill);
+                    afterVisual(() -> applyCircleDamage(center, radius, damageMultiplier, skill));
                     boss.getWorld().playSound(center, Sound.ENTITY_GENERIC_EXPLODE, 1f, 0.7f);
                     boss.getWorld().spawnParticle(Particle.EXPLOSION, center, 5, 1, 0.5, 1, 0);
                     resetBoss(originalSpeed);
@@ -184,7 +184,7 @@ public abstract class FloorBossAI {
                     cancel();
                     // ジャンプ着地
                     boss.teleport(safeLand);
-                    applyCircleDamage(safeLand, jumpRadius, damageMultiplier, skill);
+                    afterVisual(() -> applyCircleDamage(safeLand, jumpRadius, damageMultiplier, skill));
                     boss.getWorld().playSound(safeLand, Sound.ENTITY_GENERIC_EXPLODE, 1f, 1.2f);
                     boss.getWorld().spawnParticle(Particle.EXPLOSION, safeLand, 20, 0.5, 0.5, 0.5, 0.1);
                     resetBoss(originalSpeed);
@@ -231,7 +231,7 @@ public abstract class FloorBossAI {
                 if (ticks >= chargeTicks) {
                     cancel();
                     boss.teleport(safeLand);
-                    applyCircleDamage(safeLand, jumpRadius, damageMultiplier, skill);
+                    afterVisual(() -> applyCircleDamage(safeLand, jumpRadius, damageMultiplier, skill));
                     boss.getWorld().playSound(safeLand, Sound.ENTITY_GENERIC_EXPLODE, 1f, 1.2f);
                     boss.getWorld().spawnParticle(Particle.EXPLOSION, safeLand, 20, 0.5, 0.5, 0.5, 0.1);
                     resetBoss(originalSpeed);
@@ -289,7 +289,7 @@ public abstract class FloorBossAI {
 
                 if (ticks >= 15) { // 15tick後に爆発
                     cancel();
-                    applyCircleDamage(bombLoc, radius, mult, skill);
+                    afterVisual(() -> applyCircleDamage(bombLoc, radius, mult, skill));
                     boss.getWorld().playSound(bombLoc, Sound.ENTITY_GENERIC_EXPLODE, 1.5f, 1.4f);
                     boss.getWorld().spawnParticle(Particle.EXPLOSION, bombLoc, 3, 0.3, 0.3, 0.3, 0);
 
@@ -339,7 +339,7 @@ public abstract class FloorBossAI {
 
                 if (ticks >= chargeTicks) {
                     cancel();
-                    applyCircleDamageDodgeable(center, radius, damageMultiplier, skill);
+                    afterVisual(() -> applyCircleDamageDodgeable(center, radius, damageMultiplier, skill));
                     boss.getWorld().playSound(center, Sound.ENTITY_GENERIC_EXPLODE, 1f, 0.7f);
                     boss.getWorld().spawnParticle(Particle.EXPLOSION, center, 5, 1, 0.5, 1, 0);
                     resetBoss(originalSpeed);
@@ -401,7 +401,7 @@ public abstract class FloorBossAI {
 
                 if (ticks >= chargeTicks) {
                     cancel();
-                    applyRectangleDamage(origin, forward, right, width, length, damageMultiplier, skill);
+                    afterVisual(() -> applyRectangleDamage(origin, forward, right, width, length, damageMultiplier, skill));
                     boss.getWorld().playSound(origin, Sound.ENTITY_GENERIC_EXPLODE, 1f, 0.7f);
                     resetBoss(originalSpeed);
                     isCasting = false;
@@ -479,7 +479,8 @@ public abstract class FloorBossAI {
                         if (p.getLocation().distanceSquared(target) <= radius * radius
                                 && Math.abs(p.getLocation().getY() - target.getY()) <= 3.0) {
                             hitCount++;
-                            applyDamage(p, rawDamage, null);
+                            final Player drainTarget = p;
+                            afterVisual(() -> applyDamage(drainTarget, rawDamage, null));
                             p.getWorld().spawnParticle(Particle.SOUL, p.getLocation().add(0, 1, 0), 20, 0.3, 0.5, 0.3, 0.02);
                             p.playSound(p.getLocation(), Sound.ENTITY_WARDEN_HEARTBEAT, 1f, 1.5f);
                         }
@@ -538,7 +539,8 @@ public abstract class FloorBossAI {
                         double dz = pLoc.getZ() - center.getZ();
                         double dy = pLoc.getY() - center.getY();
                         if (dx * dx + dz * dz <= radius * radius && dy >= -2.0 && dy <= 3.0) {
-                            applyDamage(p, rawDamage, null);
+                            final Player poisonTarget = p;
+                            afterVisual(() -> applyDamage(poisonTarget, rawDamage, null));
                             // ★確率に関わらず必ず毒を付与する
                             plugin.getStatusEffectManager().applyPoison(p, poisonDurationSeconds);
                         }
@@ -558,6 +560,19 @@ public abstract class FloorBossAI {
                 ticks += 2;
             }
         }.runTaskTimer(plugin, 0L, 2L);
+    }
+
+    // ==========================================
+    // ★ジャストパリィ対応: 攻撃の見た目(爆発の音・パーティクル)とダメージ判定を1tick(0.05秒)ずらす。
+    // プレイヤーは見た目を見てパリィでき、見た目の直後〜判定までの間にパリィ受付が開始されていればジャストになる。
+    // ==========================================
+    protected static final long VISUAL_TO_DAMAGE_TICKS = 1L;
+
+    protected void afterVisual(Runnable damage) {
+        plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+            if (!isValid()) return;
+            damage.run();
+        }, VISUAL_TO_DAMAGE_TICKS);
     }
 
     // ==========================================
@@ -596,6 +611,13 @@ public abstract class FloorBossAI {
             if (mobData.level <= stats.level) {
                 // ★変更: 本当にパリィが成功した(ダメージを完全ブロックした)場合のみ
                 // onParrySuccess()を呼び、攻撃してきたボスを1秒硬直させる。
+                // ★ジャストパリィ: 受付開始が判定の0.1秒以内なら、円状のキラキラ演出 → 最大の瞬間に吹っ飛ばし・硬直 +
+                // 特殊攻撃ダメージ(防御力を引く前の値)を等倍でボスへ反射する
+                if (plugin.getParryManager().isJustParry(player)) {
+                    plugin.getParryManager().onJustParrySuccess(player, boss, rawDamage);
+                    player.sendMessage("§6§l[JUST PARRY!] §f完璧なタイミング！ 攻撃を跳ね返した！");
+                    return;
+                }
                 plugin.getParryManager().onParrySuccess(player, boss);
                 player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1f, 1.8f);
                 player.getWorld().spawnParticle(Particle.CRIT, player.getLocation().add(0, 1, 0), 30, 0.5, 0.5, 0.5, 0.5);
