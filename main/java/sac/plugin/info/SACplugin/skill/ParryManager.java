@@ -11,6 +11,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.util.Vector;
 import sac.plugin.info.SACplugin.SACplugin;
 import sac.plugin.info.SACplugin.item.SAOWeapon;
 
@@ -28,6 +29,13 @@ public class ParryManager implements Listener {
     // ★変更: 受付tickを4→3に短縮
     private static final long PARRY_WINDOW_TICKS = 3L;
     private static final long PARRY_COOLDOWN_MS = 5000L;
+    // ==========================================
+    // ★ジャストパリィ: パリィ受付の開始から、モブの攻撃判定までの時間がこれ以内ならジャスト(0.1秒)。
+    // モブ特殊攻撃は「見た目」が判定の1tick(0.05秒)前に出るので、見た目を基準に前後0.05秒ずつが判定窓になる。
+    // ==========================================
+    public static final long JUST_PARRY_WINDOW_MS = 100L;
+    // パリィ受付が「開始」した時刻(nanoTime)。連打で更新されない(受付開始の1回目だけを記録)。
+    private final Map<UUID, Long> parryWindowStartNanos = new HashMap<>();
     // ==========================================
     // ★変更: パリィ成功時のモブの拘束は、AI停止(setAI)や移動速度の書き換えをやめ、
     // 「強力な鈍足(ポーション効果)」で行う。効果はサーバー側が秒数で自動的に解除するので、
@@ -76,7 +84,10 @@ public class ParryManager implements Listener {
         }
 
         // パリィ発動！
-        activeParryWindows.add(uuid);
+        // ★ジャストパリィ判定用: 受付が新しく始まった時だけ開始時刻を記録する(連打でジャストを狙えないように)
+        if (activeParryWindows.add(uuid)) {
+            parryWindowStartNanos.put(uuid, System.nanoTime());
+        }
         parrySucceededThisWindow.remove(uuid); // 今回の受付の成功記録をリセット
 
         // 構えた時の「チャキッ」という音
@@ -88,6 +99,7 @@ public class ParryManager implements Listener {
             @Override
             public void run() {
                 activeParryWindows.remove(uuid);
+                parryWindowStartNanos.remove(uuid);
                 if (!parrySucceededThisWindow.remove(uuid)) {
                     parryCooldowns.put(uuid, System.currentTimeMillis());
                 }
@@ -137,6 +149,62 @@ public class ParryManager implements Listener {
         }, PARRY_SLOW_SECONDS * 20L);
 
         parriedMobs.put(mobUuid, releaseTask);
+    }
+
+    // ==========================================
+    // ★ジャストパリィ
+    // ==========================================
+
+    /** 今の受付が、JUST_PARRY_WINDOW_MS(0.1秒)以内に開始されたものか。モブの攻撃判定の瞬間に呼ぶ。 */
+    public boolean isJustParry(Player player) {
+        UUID uuid = player.getUniqueId();
+        if (!activeParryWindows.contains(uuid)) return false;
+        Long start = parryWindowStartNanos.get(uuid);
+        if (start == null) return false;
+        return (System.nanoTime() - start) <= JUST_PARRY_WINDOW_MS * 1_000_000L;
+    }
+
+    /**
+     * ジャストパリィ成功時にモブ特殊攻撃側から呼ぶ。
+     * 受付は成功扱い(クールタイム無し)にして、円状のキラキラ演出を出し、円が最大になった瞬間(0.15秒後)に
+     * 従来のパリィと同じ「吹っ飛ばし + 硬直」と、特殊攻撃ダメージの等倍反射を行う。
+     *
+     * @param reflectDamage モブへ返すダメージ（モブの特殊攻撃ダメージそのもの。プレイヤーの防御力は引かない）
+     */
+    public void onJustParrySuccess(Player player, LivingEntity attacker, double reflectDamage) {
+        parrySucceededThisWindow.add(player.getUniqueId());
+        if (attacker == null || !attacker.isValid()) return;
+
+        JustParryEffect.play(plugin, player, attacker, () -> {
+            if (!player.isOnline() || !attacker.isValid() || attacker.isDead()) return;
+
+            // 従来のパリィと同じ吹っ飛ばし
+            Vector kb = attacker.getLocation().toVector().subtract(player.getLocation().toVector());
+            if (kb.lengthSquared() < 1.0E-6) kb = player.getLocation().getDirection();
+            kb.normalize().multiply(1.5).setY(0.4);
+            attacker.setVelocity(kb);
+
+            // 従来のパリィと同じ硬直(強力な鈍足 + sao_parriedタグ)と火花
+            freezeMob(attacker);
+            SACCombatFeedback.parrySuccess(player, attacker);
+
+            // 特殊攻撃ダメージを等倍で返す(最後に行う: 倒せた場合もあるため)
+            reflectDamage(player, attacker, reflectDamage);
+        });
+    }
+
+    /** ソードスキルと同じ方式(無敵時間リセット → damage(0.0) で攻撃者を記録 → 直接HPを削る)でモブにダメージを返す */
+    private void reflectDamage(Player player, LivingEntity mob, double damage) {
+        if (damage <= 0 || mob == null || !mob.isValid() || mob.isDead()) return;
+
+        mob.setNoDamageTicks(0);
+        mob.damage(0.0, player);
+        mob.setHealth(Math.max(0.0, mob.getHealth() - damage));
+        if (plugin.getSaoMobManager() != null) {
+            plugin.getSaoMobManager().updateHpBar(mob);
+        }
+        mob.getWorld().spawnParticle(org.bukkit.Particle.CRIT, mob.getLocation().add(0, mob.getHeight() / 2.0, 0), 20, 0.3, 0.4, 0.3, 0.3);
+        sac.plugin.info.SACplugin.Event.SAODamageListener.showDamagePopup(plugin, mob, damage, true);
     }
 
     // ★後方互換用に残す(旧仕様の呼び出し元がまだ残っている場合に備えて)。
