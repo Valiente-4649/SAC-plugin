@@ -5,6 +5,10 @@ api-version: '1.21.1'
 softdepend: [NuVotifier, Vtifier]
 
 commands:
+  achievement:
+    description: 実績メニューを開きます（OPは admin サブコマンドで管理可能）
+    usage: /achievement [admin ids|reload|clearunique <id>|grant <player> <id>|revoke <player> <id>]
+    aliases: [ach]
   sac:
     description: SAOメインシステム（武器配布・モブ召喚）
     usage: /sac <give/spawn/add> <引数...>
