@@ -51,6 +51,8 @@ public class NormalAttackListener implements Listener {
         String category;
         int nextStage = 0;
         long lastAttackMs = 0L;
+        /** この時刻になるまで次の通常攻撃はできない（武器を持ち替えても消えない） */
+        long nextAllowedMs = 0L;
     }
 
     private final SACplugin plugin;
@@ -86,8 +88,12 @@ public class NormalAttackListener implements Listener {
 
         String category = resolveCategory(player, stats);
         NormalAttackManager.Config config = category == null ? null : plugin.getNormalAttackManager().get(category);
+        ComboState state = states.computeIfAbsent(player.getUniqueId(), k -> new ComboState());
         if (config == null) {
-            states.remove(player.getUniqueId());
+            // 素手・オフハンド持ち・武器以外を持っているとき。
+            // stateを消すと連打間隔の記録まで消えて「持ち替え連打で無限に攻撃できる」ので、コンボだけリセットする。
+            state.category = null;
+            state.nextStage = 0;
             return;
         }
 
@@ -95,11 +101,16 @@ public class NormalAttackListener implements Listener {
         // バニラの getAttackCooldown() は敵を殴った時点でバニラ側にリセットされてしまうので使わず、
         // 攻撃速度（maxSpeedBpm・重量・STR などが反映された GENERIC_ATTACK_SPEED）から自前で間隔を計算する。
         long now = System.currentTimeMillis();
-        ComboState state = states.computeIfAbsent(player.getUniqueId(), k -> new ComboState());
+        // 攻撃速度は SAOSTRListener が持ち替え時などにしか更新しない。ドロップ→同じスロットに拾い直し等では
+        // 素手の速さのまま残るので、通常攻撃のたびに「今手に持っている物」で最新の値に更新してから読む。
+        plugin.getStrListener().updateAttackSpeed(player);
         AttributeInstance speedAttr = player.getAttribute(Attribute.GENERIC_ATTACK_SPEED);
         double attackSpeed = speedAttr != null ? speedAttr.getValue() : 4.0;
         long intervalMs = Math.max(50L, (long) (1000.0 / Math.max(0.1, attackSpeed)) - 25L);
-        if (now - state.lastAttackMs < intervalMs) return;
+        // 念のための保険: 武器種の最速(maxSpeedBpm)より速くは絶対に振れないようにする。
+        intervalMs = Math.max(intervalMs, config.minIntervalMs - 25L);
+        // 直前の攻撃から intervalMs 以上空いていて、かつ前の武器で決まった次回可能時刻を過ぎていること
+        if (now < state.nextAllowedMs || now - state.lastAttackMs < intervalMs) return;
 
         // ---- 段階の決定（時間切れ・武器種変更で1段目に戻る） ----
         if (!category.equals(state.category)
@@ -111,6 +122,7 @@ public class NormalAttackListener implements Listener {
         NormalAttackManager.Stage stage = config.stages.get(state.nextStage);
         state.nextStage = (state.nextStage + 1) % config.stages.size();
         state.lastAttackMs = now;
+        state.nextAllowedMs = now + intervalMs;
 
         // ---- 見た目 → 判定 ----
         if (!"NONE".equals(stage.position)) {
