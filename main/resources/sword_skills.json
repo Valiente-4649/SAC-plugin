@@ -9,10 +9,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 3.6,
     "range": {
-      "forward": 6.0,
-      "backward": 0.0,
-      "width": 1.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 0,
+      "width": 1,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -20,7 +20,7 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "DOWN_MIDDLE"
+        "position": "斬り下ろし"
       }
     ],
     "motion": {
@@ -38,10 +38,10 @@
     "requiredProficiency": 3,
     "damageMultiplier": 4.4,
     "range": {
-      "forward": 4.0,
-      "backward": 0.0,
-      "width": 3.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 0,
+      "width": 3,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -49,7 +49,7 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -65,12 +65,12 @@
     "category": "片手剣",
     "requiredType": "Slash",
     "requiredProficiency": 7,
-    "damageMultiplier": 3.0,
+    "damageMultiplier": 3,
     "range": {
-      "forward": 6.0,
-      "backward": 0.0,
+      "forward": 6,
+      "backward": 0,
       "width": 1.5,
-      "height": 3.0
+      "height": 3
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -78,10 +78,10 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "UP_LEFT"
+        "position": "斬り上げ左"
       },
       {
-        "position": "DOWN_RIGHT"
+        "position": "斬り下ろし右"
       }
     ],
     "motion": {
@@ -108,10 +108,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 3.5,
     "range": {
-      "forward": 4.0,
-      "backward": 4.0,
-      "width": 6.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 4,
+      "width": 6,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -119,10 +119,10 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       },
       {
-        "position": "DIAGONAL_UP_LEFT"
+        "position": "左上"
       }
     ],
     "motion": {
@@ -147,12 +147,12 @@
     "category": "片手剣",
     "requiredType": "Slash",
     "requiredProficiency": 15,
-    "damageMultiplier": 6.0,
+    "damageMultiplier": 6,
     "range": {
-      "forward": 9.0,
-      "backward": 0.0,
+      "forward": 9,
+      "backward": 0,
       "width": 1.5,
-      "height": 2.0
+      "height": 2
     },
     "cooldown": 12,
     "chargeTime": 25,
@@ -160,12 +160,12 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "THRUST_UP"
+        "position": "上突き"
       }
     ],
     "motion": {
       "type": "DASH",
-      "distance": 9.0
+      "distance": 9
     }
   },
   "horizontal_square": {
@@ -178,10 +178,10 @@
     "requiredProficiency": 30,
     "damageMultiplier": 3.5,
     "range": {
-      "forward": 5.0,
-      "backward": 3.0,
-      "width": 6.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 3,
+      "width": 6,
+      "height": 2
     },
     "cooldown": 20,
     "chargeTime": 20,
@@ -189,16 +189,16 @@
     "color": "#00FFFF",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       },
       {
-        "position": "DIAGONAL_RIGHT_DOWN"
+        "position": "右下"
       },
       {
-        "position": "HORIZONTAL_TOP_LEFT"
+        "position": "上段左"
       },
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -233,10 +233,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 3.5,
     "range": {
-      "forward": 8.0,
-      "backward": 0.0,
-      "width": 2.0,
-      "height": 2.0
+      "forward": 8,
+      "backward": 0,
+      "width": 2,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -244,7 +244,7 @@
     "color": "#1EFF5A",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -262,10 +262,10 @@
     "requiredProficiency": 3,
     "damageMultiplier": 4.3,
     "range": {
-      "forward": 6.0,
-      "backward": 4.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 4,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -273,7 +273,7 @@
     "color": "#1EFF5A",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       }
     ],
     "motion": {
@@ -291,10 +291,10 @@
     "requiredProficiency": 7,
     "damageMultiplier": 2.8,
     "range": {
-      "forward": 8.0,
-      "backward": 0.0,
-      "width": 2.0,
-      "height": 3.0
+      "forward": 8,
+      "backward": 0,
+      "width": 2,
+      "height": 3
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -302,10 +302,10 @@
     "color": "#1EFF5A",
     "slashes": [
       {
-        "position": "THRUST_UP"
+        "position": "上突き"
       },
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -332,10 +332,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 2.9,
     "range": {
-      "forward": 6.0,
-      "backward": 0.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 0,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -343,10 +343,10 @@
     "color": "#1EFF5A",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       },
       {
-        "position": "DIAGONAL_UP_LEFT"
+        "position": "左上"
       }
     ],
     "motion": {
@@ -373,10 +373,10 @@
     "requiredProficiency": 15,
     "damageMultiplier": 2.2,
     "range": {
-      "forward": 8.0,
-      "backward": 0.0,
-      "width": 2.0,
-      "height": 3.0
+      "forward": 8,
+      "backward": 0,
+      "width": 2,
+      "height": 3
     },
     "cooldown": 12,
     "chargeTime": 20,
@@ -384,16 +384,16 @@
     "color": "#1EFF5A",
     "slashes": [
       {
-        "position": "THRUST_UP_RIGHT"
+        "position": "右上突き"
       },
       {
-        "position": "THRUST_UP_LEFT"
+        "position": "左上突き"
       },
       {
-        "position": "THRUST_RIGHT"
+        "position": "右突き"
       },
       {
-        "position": "THRUST_LEFT"
+        "position": "左突き"
       }
     ],
     "motion": {
@@ -427,10 +427,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 5.1,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
+      "forward": 5,
+      "backward": 0,
       "width": 1.5,
-      "height": 2.0
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -438,12 +438,12 @@
     "color": "#32CD32",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
       "type": "DASH",
-      "distance": 5.0
+      "distance": 5
     }
   },
   "elementary_edge": {
@@ -455,10 +455,10 @@
     "requiredProficiency": 3,
     "damageMultiplier": 6.2,
     "range": {
-      "forward": 4.0,
-      "backward": 0.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 0,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -466,7 +466,7 @@
     "color": "#32CD32",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -483,10 +483,10 @@
     "requiredProficiency": 7,
     "damageMultiplier": 4.3,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
-      "width": 1.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 0,
+      "width": 1,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -494,10 +494,10 @@
     "color": "#32CD32",
     "slashes": [
       {
-        "position": "THRUST_UP"
+        "position": "上突き"
       },
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -523,10 +523,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 4.9,
     "range": {
-      "forward": 4.0,
-      "backward": 0.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 0,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -534,10 +534,10 @@
     "color": "#32CD32",
     "slashes": [
       {
-        "position": "UP_LEFT"
+        "position": "斬り上げ左"
       },
       {
-        "position": "DOWN_MIDDLE"
+        "position": "斬り下ろし"
       }
     ],
     "motion": {
@@ -563,10 +563,10 @@
     "requiredProficiency": 15,
     "damageMultiplier": 4.3,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
-      "width": 5.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 0,
+      "width": 5,
+      "height": 2
     },
     "cooldown": 12,
     "chargeTime": 20,
@@ -574,13 +574,13 @@
     "color": "#32CD32",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       },
       {
-        "position": "DIAGONAL_RIGHT_DOWN"
+        "position": "右下"
       },
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -611,10 +611,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 3.4,
     "range": {
-      "forward": 7.0,
-      "backward": 0.0,
-      "width": 8.0,
-      "height": 2.0
+      "forward": 7,
+      "backward": 0,
+      "width": 8,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -622,7 +622,7 @@
     "color": "#FF0000",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -640,10 +640,10 @@
     "requiredProficiency": 3,
     "damageMultiplier": 3.9,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
-      "width": 7.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 0,
+      "width": 7,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -651,7 +651,7 @@
     "color": "#FF0000",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       }
     ],
     "motion": {
@@ -669,10 +669,10 @@
     "requiredProficiency": 7,
     "damageMultiplier": 4.3,
     "range": {
-      "forward": 7.0,
-      "backward": 0.0,
-      "width": 2.0,
-      "height": 2.0
+      "forward": 7,
+      "backward": 0,
+      "width": 2,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -680,12 +680,12 @@
     "color": "#FF0000",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
       "type": "DASH",
-      "distance": 5.0
+      "distance": 5
     }
   },
   "subsidence": {
@@ -698,10 +698,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 3.1,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
-      "width": 5.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 0,
+      "width": 5,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -709,10 +709,10 @@
     "color": "#FF0000",
     "slashes": [
       {
-        "position": "DIAGONAL_RIGHT_DOWN"
+        "position": "右下"
       },
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       }
     ],
     "motion": {
@@ -739,10 +739,10 @@
     "requiredProficiency": 15,
     "damageMultiplier": 5.9,
     "range": {
-      "forward": 2.0,
-      "backward": 6.0,
-      "width": 7.0,
-      "height": 2.0
+      "forward": 2,
+      "backward": 6,
+      "width": 7,
+      "height": 2
     },
     "cooldown": 12,
     "chargeTime": 20,
@@ -750,7 +750,7 @@
     "color": "#FF0000",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_LEFT"
+        "position": "中段左"
       }
     ],
     "motion": {
@@ -766,7 +766,7 @@
     "category": "刀",
     "requiredType": "Slash",
     "requiredProficiency": 1,
-    "damageMultiplier": 2.0,
+    "damageMultiplier": 2,
     "range": {
       "forward": 5,
       "backward": 0,
@@ -779,7 +779,7 @@
     "color": "#FFFFFF",
     "slashes": [
       {
-        "position": "DOWN_MIDDLE"
+        "position": "斬り下ろし"
       }
     ],
     "motion": {
@@ -807,7 +807,7 @@
     "color": "#FFFFFF",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -835,7 +835,7 @@
     "color": "#FFFFFF",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_LEFT"
+        "position": "中段左"
       }
     ],
     "motion": {
@@ -863,10 +863,10 @@
     "color": "#FFFFFF",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       },
       {
-        "position": "DIAGONAL_UP_RIGHT"
+        "position": "右上"
       }
     ],
     "motion": {
@@ -889,7 +889,7 @@
     "category": "刀",
     "requiredType": "Slash",
     "requiredProficiency": 15,
-    "damageMultiplier": 5.0,
+    "damageMultiplier": 5,
     "range": {
       "forward": 7,
       "backward": 0,
@@ -902,7 +902,7 @@
     "color": "#FFFFFF",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -919,10 +919,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 3.6,
     "range": {
-      "forward": 9.0,
-      "backward": 0.0,
+      "forward": 9,
+      "backward": 0,
       "width": 1.5,
-      "height": 2.0
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -930,12 +930,12 @@
     "color": "#DAA520",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
       "type": "DASH",
-      "distance": 5.0
+      "distance": 5
     }
   },
   "apsis": {
@@ -948,10 +948,10 @@
     "requiredProficiency": 3,
     "damageMultiplier": 4.5,
     "range": {
-      "forward": 6.0,
-      "backward": 0.0,
-      "width": 8.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 0,
+      "width": 8,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 20,
@@ -959,7 +959,7 @@
     "color": "#DAA520",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       }
     ],
     "motion": {
@@ -977,10 +977,10 @@
     "requiredProficiency": 7,
     "damageMultiplier": 5.5,
     "range": {
-      "forward": 11.0,
-      "backward": 0.0,
+      "forward": 11,
+      "backward": 0,
       "width": 1.5,
-      "height": 2.0
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -988,7 +988,7 @@
     "color": "#DAA520",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -1006,10 +1006,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 3.7,
     "range": {
-      "forward": 6.0,
-      "backward": 3.0,
-      "width": 8.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 3,
+      "width": 8,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 20,
@@ -1017,10 +1017,10 @@
     "color": "#DAA520",
     "slashes": [
       {
-        "position": "HORIZONTAL_MIDDLE_RIGHT"
+        "position": "中段右"
       },
       {
-        "position": "HORIZONTAL_BOTTOM_LEFT"
+        "position": "下段左"
       }
     ],
     "motion": {
@@ -1047,10 +1047,10 @@
     "requiredProficiency": 15,
     "damageMultiplier": 4.2,
     "range": {
-      "forward": 9.0,
-      "backward": 0.0,
+      "forward": 9,
+      "backward": 0,
       "width": 1.5,
-      "height": 2.0
+      "height": 2
     },
     "cooldown": 12,
     "chargeTime": 20,
@@ -1058,10 +1058,10 @@
     "color": "#DAA520",
     "slashes": [
       {
-        "position": "THRUST_UP"
+        "position": "上突き"
       },
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
@@ -1088,10 +1088,10 @@
     "requiredProficiency": 1,
     "damageMultiplier": 3.5,
     "range": {
-      "forward": 4.0,
-      "backward": 0.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 0,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 10,
@@ -1099,7 +1099,7 @@
     "color": "#4400FF",
     "slashes": [
       {
-        "position": "DIAGONAL_RIGHT_DOWN"
+        "position": "右下"
       }
     ],
     "motion": {
@@ -1115,12 +1115,12 @@
     "category": "曲刀",
     "requiredType": "Slash",
     "requiredProficiency": 3,
-    "damageMultiplier": 4.0,
+    "damageMultiplier": 4,
     "range": {
-      "forward": 7.0,
-      "backward": 0.0,
-      "width": 2.0,
-      "height": 2.0
+      "forward": 7,
+      "backward": 0,
+      "width": 2,
+      "height": 2
     },
     "cooldown": 8,
     "chargeTime": 10,
@@ -1128,12 +1128,12 @@
     "color": "#4400FF",
     "slashes": [
       {
-        "position": "THRUST_"
+        "position": "中央突き"
       }
     ],
     "motion": {
       "type": "DASH",
-      "distance": 5.0
+      "distance": 5
     }
   },
   "double_moon": {
@@ -1144,12 +1144,12 @@
     "category": "曲刀",
     "requiredType": "Slash",
     "requiredProficiency": 7,
-    "damageMultiplier": 3.0,
+    "damageMultiplier": 3,
     "range": {
-      "forward": 5.0,
-      "backward": 0.0,
-      "width": 5.0,
-      "height": 2.0
+      "forward": 5,
+      "backward": 0,
+      "width": 5,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 10,
@@ -1157,10 +1157,10 @@
     "color": "#4400FF",
     "slashes": [
       {
-        "position": "DIAGONAL_LEFT_DOWN"
+        "position": "左下"
       },
       {
-        "position": "HORIZONTAL_BOTTOM_RIGHT"
+        "position": "下段右"
       }
     ],
     "motion": {
@@ -1187,10 +1187,10 @@
     "requiredProficiency": 9,
     "damageMultiplier": 5.7,
     "range": {
-      "forward": 4.0,
-      "backward": 4.0,
-      "width": 4.0,
-      "height": 2.0
+      "forward": 4,
+      "backward": 4,
+      "width": 4,
+      "height": 2
     },
     "cooldown": 10,
     "chargeTime": 10,
@@ -1198,7 +1198,7 @@
     "color": "#4400FF",
     "slashes": [
       {
-        "position": "DIAGONAL_UP_RIGHT"
+        "position": "右上"
       }
     ],
     "motion": {
@@ -1216,10 +1216,10 @@
     "requiredProficiency": 15,
     "damageMultiplier": 6.7,
     "range": {
-      "forward": 6.0,
-      "backward": 6.0,
-      "width": 6.0,
-      "height": 2.0
+      "forward": 6,
+      "backward": 6,
+      "width": 6,
+      "height": 2
     },
     "cooldown": 12,
     "chargeTime": 10,
@@ -1227,7 +1227,7 @@
     "color": "#4400FF",
     "slashes": [
       {
-        "position": "HORIZONTAL_BOTTOM_RIGHT"
+        "position": "下段右"
       }
     ],
     "motion": {
@@ -1246,7 +1246,7 @@
     "damageMultiplier": 3.5,
     "range": {
       "forward": 2.5,
-      "backward": 0.0,
+      "backward": 0,
       "width": 1.8,
       "height": 1.5
     },
@@ -1274,12 +1274,12 @@
     "category": "体術",
     "requiredType": "Strike",
     "requiredProficiency": 3,
-    "damageMultiplier": 4.0,
+    "damageMultiplier": 4,
     "range": {
       "forward": 2.8,
-      "backward": 0.0,
+      "backward": 0,
       "width": 2.2,
-      "height": 1.0
+      "height": 1
     },
     "cooldown": 15,
     "chargeTime": 3,

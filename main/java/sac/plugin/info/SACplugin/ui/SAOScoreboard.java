@@ -103,22 +103,21 @@ public class SAOScoreboard { // 名前を SAOScoreboard に変更
 
         int vitalityPercent = (int) Math.ceil(data.vitality);
         String vitalityColor = data.vitality <= 10 ? "§c" : "§a";
-        obj.getScore("§fVitality: " + vitalityColor + vitalityPercent + "%").setScore(0);
         obj.getScore("§7--------------------").setScore(15);
         obj.getScore("§fName: §b" + player.getName()).setScore(14);
         obj.getScore("§fLevel: §e" + data.level).setScore(13);
         obj.getScore(hpLine).setScore(12);
         obj.getScore(hungerLine).setScore(11);
-        obj.getScore("§fEXP: §e" + data.exp + " §7/ §e" + displayMaxExp).setScore(10);
-        obj.getScore("§fCol: §6" + data.col).setScore(9);
-        obj.getScore(" ").setScore(8);
-        obj.getScore(strLine).setScore(7);
-        obj.getScore(agiLine).setScore(6);
-        obj.getScore("§fSkillPoints: §e" + data.skillPoint).setScore(5);
-        obj.getScore("  ").setScore(4);
-        obj.getScore("§fSET SKILL: §e" + skillName).setScore(3);
-        obj.getScore("§fTime: §b" + gameTime).setScore(2);
-        obj.getScore("§7--------------------  ").setScore(1);
+        obj.getScore("§fVitality: " + vitalityColor + vitalityPercent + "%").setScore(10);
+        obj.getScore("§fEXP: §e" + data.exp + " §7/ §e" + displayMaxExp).setScore(9);
+        obj.getScore("§fCol: §6" + data.col).setScore(8);
+        obj.getScore(" ").setScore(7);
+        obj.getScore(strLine).setScore(6);
+        obj.getScore(agiLine).setScore(5);
+        obj.getScore("§fSkillPoints: §e" + data.skillPoint).setScore(4);
+        obj.getScore("§fSET SKILL: §e" + skillName).setScore(2);
+        obj.getScore("§fTime: §b" + gameTime).setScore(1);
+        obj.getScore("§7--------------------  ").setScore(0);
 
         // ==========================================
         // ★追加: スコアボード更新と同時に、頭上とTabリストのHPバーも更新

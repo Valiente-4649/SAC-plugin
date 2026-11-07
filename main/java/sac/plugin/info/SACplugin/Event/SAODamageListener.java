@@ -371,6 +371,16 @@ public class SAODamageListener implements Listener {
         Player player = (Player) event.getDamager();
 
         // ==========================================
+        // ★通常攻撃リニューアル: バニラの左クリック攻撃(ダメージ>0.05)は無効化する。
+        // 通常攻撃は NormalAttackListener が範囲判定して発生させる(その間だけ isInternalHit() が true)。
+        // ソードスキルは damage(0.0, player) で「攻撃した事実」だけ作るので、この判定の影響を受けない。
+        // ==========================================
+        if (event.getDamage() > 0.05 && !NormalAttackListener.isInternalHit()) {
+            event.setCancelled(true);
+            return;
+        }
+
+        // ==========================================
         // ★追加: スタン・麻痺中は武器による攻撃を一切できないようにする
         // ==========================================
         if (plugin.getStatusEffectManager().isActionLocked(player)) {
@@ -488,7 +498,8 @@ public class SAODamageListener implements Listener {
 
             // 3. 【既存のクールタイム判定】 (ダメージ計算を行うかどうかの判定)
             float cooldown = player.getAttackCooldown();
-            if (cooldown < 1.0f) {
+            // ★通常攻撃リニューアル: クールタイムは NormalAttackListener 側で判定・リセット済みなので内部ヒット時は素通しする
+            if (cooldown < 1.0f && !NormalAttackListener.isInternalHit()) {
                 event.setDamage(0);
                 return;
             }

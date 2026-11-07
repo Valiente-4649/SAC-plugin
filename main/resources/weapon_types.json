@@ -6,7 +6,32 @@
     "description": "バランスの取れた汎用武器種。ソードスキルは単発〜多段まで幅広い。",
     "maxSpeedBpm": 110,
     "canParry": true,
-    "iconCustomModelData": 5
+    "iconCustomModelData": 5,
+    "normalAttack": {
+      "comboResetTicks": 30,
+      "stages": [
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "右下"
+        },
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "中段左"
+        },
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "右上"
+        },
+        {
+          "depth": 5,
+          "width": 2,
+          "position": "斬り下ろし"
+        }
+      ]
+    }
   },
   {
     "category": "細剣",
@@ -15,7 +40,27 @@
     "description": "高速なコンボが特徴。連撃回数が増えるほど威力が増す。",
     "maxSpeedBpm": 110,
     "knockback": false,
-    "iconCustomModelData": 35
+    "iconCustomModelData": 35,
+    "normalAttack": {
+      "comboResetTicks": 25,
+      "stages": [
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "左下"
+        },
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "中段右"
+        },
+        {
+          "depth": 5,
+          "width": 1,
+          "position": "中央突き"
+        }
+      ]
+    }
   },
   {
     "category": "短剣",
@@ -26,7 +71,27 @@
     "weightAffectsSpeed": false,
     "strAffectsSpeed": false,
     "knockback": false,
-    "iconCustomModelData": 65
+    "iconCustomModelData": 65,
+    "normalAttack": {
+      "comboResetTicks": 20,
+      "stages": [
+        {
+          "depth": 3,
+          "width": 2,
+          "position": "中段左"
+        },
+        {
+          "depth": 3,
+          "width": 2,
+          "position": "下段右"
+        },
+        {
+          "depth": 3,
+          "width": 2,
+          "position": "左上"
+        }
+      ]
+    }
   },
   {
     "category": "両手剣",
@@ -35,7 +100,27 @@
     "description": "長めのリーチと重い一撃が特徴。スキルの範囲攻撃に優れる。",
     "maxSpeedBpm": 80,
     "canParry": true,
-    "iconCustomModelData": 95
+    "iconCustomModelData": 95,
+    "normalAttack": {
+      "comboResetTicks": 40,
+      "stages": [
+        {
+          "depth": 5,
+          "width": 4,
+          "position": "左下"
+        },
+        {
+          "depth": 5,
+          "width": 4,
+          "position": "中段右"
+        },
+        {
+          "depth": 6,
+          "width": 3,
+          "position": "斬り下ろし"
+        }
+      ]
+    }
   },
   {
     "category": "刀",
@@ -44,7 +129,27 @@
     "description": "抜刀カウンターを持つ反撃特化の武器種。カウンター時は高倍率で即発動。",
     "maxSpeedBpm": 110,
     "knockback": false,
-    "iconCustomModelData": 121
+    "iconCustomModelData": 121,
+    "normalAttack": {
+      "comboResetTicks": 30,
+      "stages": [
+        {
+          "depth": 4,
+          "width": 3,
+          "position": "左下"
+        },
+        {
+          "depth": 4,
+          "width": 1,
+          "position": "中央突き"
+        },
+        {
+          "depth": 4,
+          "width": 2,
+          "position": "斬り上げ"
+        }
+      ]
+    }
   },
   {
     "category": "槍",
@@ -53,7 +158,27 @@
     "description": "最長のリーチを誇る武器種。特殊能力・ノックバック・パリィは一切なく、間合いの管理そのものが強み。",
     "maxSpeedBpm": 110,
     "knockback": false,
-    "iconCustomModelData": 155
+    "iconCustomModelData": 155,
+    "normalAttack": {
+      "comboResetTicks": 35,
+      "stages": [
+        {
+          "depth": 7,
+          "width": 1,
+          "position": "右突き"
+        },
+        {
+          "depth": 7,
+          "width": 1,
+          "position": "左突き"
+        },
+        {
+          "depth": 7,
+          "width": 1,
+          "position": "中央突き"
+        }
+      ]
+    }
   },
   {
     "category": "曲刀",
@@ -62,7 +187,27 @@
     "description": "耐久値が低い代わりに、火力が高く軽いのが特徴。",
     "maxSpeedBpm": 110,
     "knockback": false,
-    "iconCustomModelData": 185
+    "iconCustomModelData": 185,
+    "normalAttack": {
+      "comboResetTicks": 25,
+      "stages": [
+        {
+          "depth": 3.5,
+          "width": 3,
+          "position": "左下"
+        },
+        {
+          "depth": 3.5,
+          "width": 3,
+          "position": "右下"
+        },
+        {
+          "depth": 3.5,
+          "width": 3.5,
+          "position": "中段右"
+        }
+      ]
+    }
   },
   {
     "category": "体術",
@@ -77,6 +222,26 @@
     "unarmedDamagePerLevel": 1,
     "movementSpeedBonusPercent": 5,
     "requiresUnlock": true,
-    "iconCustomModelData": 0
+    "iconCustomModelData": 0,
+    "normalAttack": {
+      "comboResetTicks": 25,
+      "stages": [
+        {
+          "depth": 3,
+          "width": 2,
+          "position": "なし"
+        },
+        {
+          "depth": 3,
+          "width": 2,
+          "position": "なし"
+        },
+        {
+          "depth": 3.5,
+          "width": 2.5,
+          "position": "なし"
+        }
+      ]
+    }
   }
 ]
