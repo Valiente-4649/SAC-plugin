@@ -14,6 +14,15 @@ import sac.plugin.info.SACplugin.SACplugin;
 
 public class SAOMobSkillExecutor {
 
+    // ==========================================
+    // ★ジャストパリィ対応: パリィ可能な特殊攻撃は「見た目(移動・音)」を、ダメージ判定の
+    // この tick 数だけ前に出す。1tick = 0.05秒（Minecraft の最小単位。0.01秒単位のずらしは実装できない）。
+    // ダメージ判定のタイミング自体は従来のまま。1〜2 の範囲で指定する。
+    // ==========================================
+    private static final int SPECIAL_DAMAGE_DELAY_TICKS = 1;
+    /** 溜め時間を監視するループの間隔（tick） */
+    private static final int CHARGE_LOOP_TICKS = 2;
+
     // スキルを発動するメインメソッド
     public static void castSkill(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData) {
         if (mob.getScoreboardTags().contains("sao_casting")) return; // 既に詠唱中なら無視
@@ -33,6 +42,9 @@ public class SAOMobSkillExecutor {
         // 赤く塗りつぶすパーティクルの設定
         Particle.DustOptions redDust = new Particle.DustOptions(Color.RED, 1.0f);
 
+        // ★ジャストパリィ対象の攻撃か（対象なら見た目とダメージ判定を分けて実行する）
+        final boolean splitAttack = isJustParryable(skill);
+
         // 2. 溜め時間（chargeTicks）中のエフェクト描画ループ
         new BukkitRunnable() {
             int ticks = 0;
@@ -50,6 +62,14 @@ public class SAOMobSkillExecutor {
                     currentLoc.setYaw(lockedYaw);
                     currentLoc.setPitch(lockedPitch);
                     mob.teleport(currentLoc); // 向きがズレたら即座に戻す
+                }
+
+                // ★ジャストパリィ対象: 従来の攻撃実行の「CHARGE_LOOP_TICKS 手前」で、見た目→ダメージ判定の2段階に分けて実行する。
+                // ダメージ判定は従来と同じ tick に起こる。
+                if (splitAttack && ticks + CHARGE_LOOP_TICKS >= skill.chargeTicks) {
+                    this.cancel();
+                    executeAttackSplit(plugin, mob, skill, mobData, originalSpeed, lockedDir);
+                    return;
                 }
 
                 if (ticks >= skill.chargeTicks) {
@@ -143,8 +163,8 @@ public class SAOMobSkillExecutor {
         }
     }
 
-    // --- 実際の攻撃と移動処理 ---
-    private static void executeAttack(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData, double originalSpeed, Vector lockedDir) {
+    // --- 攻撃の「見た目」: 突進・ジャンプの移動と攻撃音（ジャストパリィの基準になる瞬間） ---
+    private static void playAttackVisual(LivingEntity mob, MobSkillData skill, Vector lockedDir) {
         Location loc = mob.getLocation();
         Vector dir = lockedDir.clone(); // ★ 攻撃の進行方向もロックされた視点に固定
         int lv = skill.rangeLevel;
@@ -165,10 +185,15 @@ public class SAOMobSkillExecutor {
 
         // 攻撃音
         mob.getWorld().playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 1.2f);
+    }
+
+    // --- 実際の攻撃と移動処理 ---
+    private static void executeAttack(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData, double originalSpeed, Vector lockedDir) {
+        playAttackVisual(mob, skill, lockedDir);
 
         // ダメージ判定 (ジャンプ攻撃以外は即座に判定)
         if (!skill.attackId.equalsIgnoreCase("jump_slam")) {
-            applyDamageToPlayers(plugin, mob, skill, mobData, lockedDir);
+            applyDamageToPlayers(plugin, mob, skill, mobData, lockedDir, mob.getLocation());
             resetMob(mob, originalSpeed);
         } else {
             // ジャンプ攻撃は着地するまで待ってからダメージ判定
@@ -183,7 +208,7 @@ public class SAOMobSkillExecutor {
                     if (mob.getVelocity().getY() <= 0 && ((org.bukkit.entity.Entity) mob).isOnGround()) {
                         mob.getWorld().spawnParticle(Particle.EXPLOSION, mob.getLocation(), 2);
                         mob.getWorld().playSound(mob.getLocation(), Sound.ENTITY_IRON_GOLEM_DEATH, 1.0f, 0.5f);
-                        applyDamageToPlayers(plugin, mob, skill, mobData, lockedDir);
+                        applyDamageToPlayers(plugin, mob, skill, mobData, lockedDir, mob.getLocation());
                         resetMob(mob, originalSpeed);
                         mob.removeScoreboardTag("sao_no_falldamage");
                         this.cancel();
@@ -193,9 +218,38 @@ public class SAOMobSkillExecutor {
         }
     }
 
+    // --- ジャストパリィ対象の特殊攻撃か（ジャンプ攻撃と円形はパリィ不可なので対象外） ---
+    private static boolean isJustParryable(MobSkillData skill) {
+        String id = skill.attackId == null ? "" : skill.attackId.toLowerCase();
+        return id.equals("charge") || id.equals("cone_front") || id.equals("rect_front") || id.equals("cone_side");
+    }
+
+    // --- 見た目 → (SPECIAL_DAMAGE_DELAY_TICKS 後に) ダメージ判定、の2段階実行 ---
+    // 呼び出しは従来の攻撃実行の CHARGE_LOOP_TICKS 手前。見た目は (CHARGE_LOOP_TICKS - DELAY) 後、
+    // ダメージ判定は CHARGE_LOOP_TICKS 後 = 従来と同じタイミング。
+    // 当たり判定の基準位置は「見た目の瞬間のモブの位置」に固定する（突進で動いた後の位置では判定しない）。
+    private static void executeAttackSplit(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData, double originalSpeed, Vector lockedDir) {
+        final Location origin = mob.getLocation().clone();
+        final int delay = Math.max(1, Math.min(CHARGE_LOOP_TICKS, SPECIAL_DAMAGE_DELAY_TICKS));
+        final long visualAfter = CHARGE_LOOP_TICKS - delay;
+
+        Runnable visual = () -> {
+            if (mob.isDead() || !mob.isValid()) return;
+            playAttackVisual(mob, skill, lockedDir);
+        };
+        if (visualAfter <= 0) visual.run();
+        else org.bukkit.Bukkit.getScheduler().runTaskLater(plugin, visual, visualAfter);
+
+        org.bukkit.Bukkit.getScheduler().runTaskLater(plugin, () -> {
+            if (mob.isDead() || !mob.isValid()) return;
+            applyDamageToPlayers(plugin, mob, skill, mobData, lockedDir, origin);
+            resetMob(mob, originalSpeed);
+        }, (long) CHARGE_LOOP_TICKS);
+    }
+
     // --- プレイヤーへのダメージ判定ロジック ---
-    private static void applyDamageToPlayers(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData, Vector lockedDir) {
-        Location mLoc = mob.getLocation();
+    // mLoc: 当たり判定の基準位置（通常は攻撃の見た目が出た瞬間のモブの位置）
+    private static void applyDamageToPlayers(SACplugin plugin, LivingEntity mob, MobSkillData skill, SAOMobData mobData, Vector lockedDir, Location mLoc) {
         Vector dir = lockedDir.clone();
         int lv = skill.rangeLevel;
 
@@ -205,7 +259,7 @@ public class SAOMobSkillExecutor {
         // ★修正1: 索敵レーダーを固定の10マスから、スキルの範囲(lv)に合わせて拡大！
         // ==========================================
         double searchRadius = lv + 5.0; // 範囲ギリギリのプレイヤーも拾えるように+5の余裕を持たせる
-        for (org.bukkit.entity.Entity e : mob.getNearbyEntities(searchRadius, 10.0, searchRadius)) {
+        for (org.bukkit.entity.Entity e : mLoc.getWorld().getNearbyEntities(mLoc, searchRadius, 10.0, searchRadius)) {
             if (!(e instanceof Player)) continue;
             Player p = (Player) e;
 
@@ -300,6 +354,17 @@ public class SAOMobSkillExecutor {
                         // ② パリィ可能な攻撃の場合
                         // ★追加: Heavinessボーナスが1以上あれば、パリィ可能な敵レベルを自分Lv+1まで許容する
                         else if (mobData.level <= stats.level + (sac.plugin.info.SACplugin.Smithing.ForgeManager.getHeavinessBonus(p.getInventory().getItemInMainHand()) > 0 ? 1 : 0)) {
+                            // ==========================================
+                            // ★ジャストパリィ: 受付開始が攻撃判定の0.1秒以内なら、円状のキラキラ演出 → 最大の瞬間に
+                            // 吹っ飛ばし・硬直 + 特殊攻撃ダメージ(防御力を引く前の値)を等倍でモブへ反射する
+                            // ==========================================
+                            if (mainPlugin.getParryManager().isJustParry(p)) {
+                                mainPlugin.getParryManager().onJustParrySuccess(p, mob, damage);
+                                p.sendMessage("§6§l[JUST PARRY!] §f完璧なタイミング！ 攻撃を跳ね返した！");
+                                sac.plugin.info.SACplugin.Event.SAODamageListener.reduceDurabilityOnly(p, p.getInventory().getItemInMainHand(), 1);
+                                continue; // ★ ジャストパリィ成功！これより下のダメージ計算をすべてスキップする！
+                            }
+
                             // ★変更: 硬直させるため、removeParry()ではなくonParrySuccess()を呼ぶ
                             mainPlugin.getParryManager().onParrySuccess(p, mob);
                             p.playSound(p.getLocation(), org.bukkit.Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.8f);
