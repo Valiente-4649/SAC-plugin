@@ -59,6 +59,8 @@ import sac.plugin.info.SACplugin.task.TimeManager;
 import sac.plugin.info.SACplugin.treasure.*;
 import sac.plugin.info.SACplugin.ui.SAOScoreboard;
 import sac.plugin.info.SACplugin.util.Reloadable;
+import sac.plugin.info.SACplugin.network.PlayerDataChannel;
+import sac.plugin.info.SACplugin.network.MapShareChannel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -128,6 +130,15 @@ public class SACplugin extends JavaPlugin {
         getLogger().info("バニラのクラフトレシピを完全に消去しました。");
 
         if (!getDataFolder().exists()) getDataFolder().mkdir();
+
+        PlayerDataChannel playerDataChannel = new PlayerDataChannel(this);
+        getServer().getMessenger().registerIncomingPluginChannel(this, PlayerDataChannel.CHANNEL, playerDataChannel);
+        getServer().getMessenger().registerOutgoingPluginChannel(this, PlayerDataChannel.CHANNEL);
+
+        MapShareChannel mapShareChannel = new MapShareChannel(this);
+        getServer().getMessenger().registerIncomingPluginChannel(this, MapShareChannel.CHANNEL, mapShareChannel);
+        getServer().getMessenger().registerOutgoingPluginChannel(this, MapShareChannel.CHANNEL);
+        getServer().getPluginManager().registerEvents(mapShareChannel, this);
 
         // マネジャークラスの初期化
         this.playerManager = new PlayerManager(this);
@@ -388,6 +399,10 @@ public class SACplugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        getServer().getMessenger().unregisterIncomingPluginChannel(this, PlayerDataChannel.CHANNEL);
+        getServer().getMessenger().unregisterOutgoingPluginChannel(this, PlayerDataChannel.CHANNEL);
+        getServer().getMessenger().unregisterIncomingPluginChannel(this, MapShareChannel.CHANNEL);
+        getServer().getMessenger().unregisterOutgoingPluginChannel(this, MapShareChannel.CHANNEL);
         // サーバーにいる全プレイヤーをループ処理でキックする
         for (org.bukkit.entity.Player player : org.bukkit.Bukkit.getOnlinePlayers()) {
             player.kickPlayer("§cサーバーが再起動またはリロードされています。\n§f少し待ってから再接続してください。");
