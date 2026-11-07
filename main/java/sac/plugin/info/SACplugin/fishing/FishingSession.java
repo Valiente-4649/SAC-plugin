@@ -333,6 +333,17 @@ public class FishingSession {
             }
             player.sendMessage("§b[System] §r§f獲得: §b" + resultFish.name);
 
+            // ★追加(実績): 大物(Sizeのloreに[大物]が付く)を釣ったらランク別に記録する
+            if (plugin.getAchievementManager() != null) {
+                boolean achBig = false;
+                if (fishItem.hasItemMeta() && fishItem.getItemMeta().hasLore()) {
+                    for (String l : fishItem.getItemMeta().getLore()) {
+                        if (l != null && l.contains("大物")) { achBig = true; break; }
+                    }
+                }
+                plugin.getAchievementManager().onFishCaught(player, resultFish.rank, achBig);
+            }
+
             PlayerData stats = plugin.getPlayerManager().getStats(player);
             if (stats != null) {
                 // ★追加: もしリストがnull(未作成)だったら初期化する

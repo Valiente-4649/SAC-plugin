@@ -286,6 +286,14 @@ public class MenuListener implements Listener {
         pointBtn.setItemMeta(pointMeta);
         inv.setItem(15, pointBtn);
 
+        // ★追加: 実績確認リストへのアイコン
+        ItemStack achBtn = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemMeta achMeta = achBtn.getItemMeta();
+        achMeta.setDisplayName("§6実績を確認する");
+        achMeta.setLore(Arrays.asList("§7獲得した実績の確認と、称号の設定ができます"));
+        achBtn.setItemMeta(achMeta);
+        inv.setItem(13, achBtn);
+
         player.openInventory(inv);
     }
 
@@ -383,6 +391,12 @@ public class MenuListener implements Listener {
         if (data == null) return;
 
         if (title.equals("§b《 Stats 》")) {
+            if (slot == 13) {
+                // ★追加: 実績確認リストを開く
+                player.closeInventory();
+                plugin.getAchievementMenu().openOwn(player);
+                return;
+            }
             if (slot == 11) {
                 // 1. チャットに表示
                 player.closeInventory();

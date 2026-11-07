@@ -293,6 +293,9 @@ public class CookingListener implements Listener {
                         }
                     }
 
+                    // ★追加(実績): 調理成功を記録する
+                    if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onCookSuccess(player, recipe.recipeId);
+
                     // ★変更: バッチサイズの数だけ成功アイテムを渡す
                     for (int i = 0; i < batchSize; i++) {
                         giveItem(player, recipe.successItem.id);

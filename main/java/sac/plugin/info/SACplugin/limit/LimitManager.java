@@ -61,6 +61,11 @@ public class LimitManager implements Reloadable {
         loadLimits();
     }
 
+    // ★追加(実績): 熟練度の上限が設定されている全スキル名(level_limits.jsonのskill_limitsのキー、JSONの並び順)
+    public java.util.List<String> getSkillLimitKeys() {
+        return new java.util.ArrayList<>(skillLimits.keySet());
+    }
+
     // 指定したスキルの上限を取得（JSONに無ければ999＝実質上限なし）
     public int getSkillLimit(String skillName) {
         if (skillLimits.has(skillName)) {

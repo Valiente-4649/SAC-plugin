@@ -135,6 +135,10 @@ public class SAOFarmingListener implements Listener {
                         if (gData != null) {
                             ItemStack drop = plugin.getSaoItemManager().createGeneralItem(gData);
                             block.getWorld().dropItemNaturally(block.getLocation(), drop);
+                            // ★追加(実績): 肥料で育てた最高品質の収穫を記録する
+                            if (pCrop.isFertilized && plugin.getAchievementManager() != null) {
+                                plugin.getAchievementManager().onBestCrop(player, pCrop.cropId);
+                            }
                             player.sendMessage("§a[System] " + gData.name + " §aを収穫した！");
                             player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1.2f);
                         }

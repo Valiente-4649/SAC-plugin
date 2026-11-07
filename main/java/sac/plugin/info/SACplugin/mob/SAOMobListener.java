@@ -110,6 +110,9 @@ public class SAOMobListener implements Listener {
                         PlayerData stats = plugin.getPlayerManager().getStats(killer);
 
                         if (stats != null) {
+                            // ★追加(実績): 通常モブの討伐数を記録する
+                            if (plugin.getAchievementManager() != null) plugin.getAchievementManager().onMobKill(killer, mobId);
+
                             // ★変更: exp/colをmobs.json側の範囲([exp,expMax]/[col,colMax])で個別に抽選する
                             int finalExp = mobData.rollExp();
                             long finalCol = mobData.rollCol();
@@ -290,6 +293,14 @@ public class SAOMobListener implements Listener {
         if (participants.isEmpty() && killer != null) {
             participants = new java.util.ArrayList<>();
             participants.add(killer);
+        }
+
+        // ★追加(実績): ボス討伐を記録する。ボス部屋に自分しかいなければソロ討伐として扱う。
+        if (plugin.getAchievementManager() != null) {
+            boolean soloKill = participants.size() == 1;
+            for (Player ap : participants) {
+                if (ap != null && ap.isOnline()) plugin.getAchievementManager().onBossKill(ap, mobId, soloKill);
+            }
         }
 
         // ★変更: exp/colの「基礎値」はmobs.jsonの範囲([exp,expMax]/[col,colMax])から1回だけ抽選し、
