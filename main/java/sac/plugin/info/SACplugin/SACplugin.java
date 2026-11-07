@@ -32,6 +32,7 @@ import sac.plugin.info.SACplugin.farming.SAOFarmMenuListener;
 import sac.plugin.info.SACplugin.fishing.SAOFishingListener;
 import sac.plugin.info.SACplugin.fishing.SAOFishingManager;
 import sac.plugin.info.SACplugin.fishing.FishingGearMenuListener;
+import sac.plugin.info.SACplugin.item.NormalAttackManager;
 import sac.plugin.info.SACplugin.item.SAOItemManager;
 import sac.plugin.info.SACplugin.item.WeaponTypeManager;
 import sac.plugin.info.SACplugin.limit.LimitManager;
@@ -112,6 +113,7 @@ public class SACplugin extends JavaPlugin {
     private SAOMobListener saoMobListener;
     private SurvivalManager survivalManager;
     private SafeZoneManager safeZoneManager;
+    private NormalAttackManager normalAttackManager;
     // ==========================================
     // ★追加: /sacreload から一括で再読み込みできるようにするための登録リスト。
     // これから新しいマネージャーを増やす時は、implements Reloadable してここに登録するだけでよい。
@@ -135,6 +137,9 @@ public class SACplugin extends JavaPlugin {
         this.weaponTypeManager = new WeaponTypeManager(this);
         reloadables.add(this.saoItemManager);
         reloadables.add(this.weaponTypeManager);
+        // ★通常攻撃: weapon_types.json の "normalAttack" を読む（WeaponTypeManager の後に作る）
+        this.normalAttackManager = new NormalAttackManager(this);
+        this.normalAttackManager.load();
         this.saoMobManager = new SAOMobManager(this);
         reloadables.add(this.saoMobManager);
         this.saoSellListener = new SAOSellListener(this);
@@ -307,6 +312,7 @@ public class SACplugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new TpGateListener(this), this);
         getServer().getPluginManager().registerEvents(new TreasureListener(this), this);
         getServer().getPluginManager().registerEvents(new WeaponReachListener(this), this);
+        getServer().getPluginManager().registerEvents(new NormalAttackListener(this), this);
 
         // ★起動時にプレイヤーショップのワールド同期を実行
         // ワールドエンティティが完全にロードされるまで少し待つ
@@ -331,6 +337,7 @@ public class SACplugin extends JavaPlugin {
         return saoItemManager;
     }
     public WeaponTypeManager getWeaponTypeManager() { return weaponTypeManager; }
+    public NormalAttackManager getNormalAttackManager() { return normalAttackManager; }
     public UpgradeMenuListener getUpgradeMenuListener() { return upgradeMenuListener; }
     public SAOMobManager getSaoMobManager() { return saoMobManager; }
     public SAOSellListener getSaoSellListener() {return saoSellListener;}

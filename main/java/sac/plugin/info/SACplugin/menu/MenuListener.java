@@ -388,11 +388,11 @@ public class MenuListener implements Listener {
                 player.closeInventory();
                 player.sendMessage("§6===============[ Status ]===============");
                 player.sendMessage("§f名前: §a" + player.getName());
-                player.sendMessage("§b[System] §r§fレベル: §e" + data.level);
+                player.sendMessage("§§r§fレベル: §e" + data.level);
                 player.sendMessage("§fHP: §c" + (int)data.currentHP + " §f/ §c" + (int)data.maxHP);
                 player.sendMessage("§fCol: §6" + data.col);
-                player.sendMessage("§b[System] §r§fSTR: §c" + data.str);
-                player.sendMessage("§b[System] §r§fAGI: §b" + data.agi);
+                player.sendMessage("§r§fSTR: §c" + data.str);
+                player.sendMessage("§r§fAGI: §b" + data.agi);
 
                 // ==========================================
                 // ★追加: 命中率の表示。手持ち武器のAccuracyボーナスから算出する。
